@@ -9,14 +9,16 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Installing Packages 
+Installing necessary packages
 
 ```{r}
 install.packages("bibliometrix", dependencies=TRUE) 
 ```
 
 
-Creating a datafram from imported 
+Creating a dataframe from imported .bib files
+Right now we're using a test file ("Test_file.bib") with just 4 papers
+
 ```{r}
 library(bibliometrix)
 
@@ -26,4 +28,7 @@ datadf_bib <- convert2df(data_bib, dbsource = "isi", format = "bibtex")
 ```
 
 
+```{r}
+
+```
 

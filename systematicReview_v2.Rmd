@@ -44,12 +44,11 @@ install.packages("bibliometrix", dependencies=TRUE, repos = "http://cran.us.r-pr
 ```
 
 'convert2df' creates a dataframe from the imported .bib files. 
-Currently, we're using a test file ("Test_file.bib") with just 4 papers.
 
 ```{r, echo=TRUE}
 library(bibliometrix)
 
-data_bib <- readFiles("Test_File.bib")
+data_bib <- readFiles("Web_Of_Science_Downloads/savedrecs_1-500.bib","Web_Of_Science_Downloads/savedrecs_501-1000.bib","Web_Of_Science_Downloads/savedrecs_1001-1500.bib","Web_Of_Science_Downloads/savedrecs_1501_2000.bib","Web_Of_Science_Downloads/savedrecs_2001-2500.bib","Web_Of_Science_Downloads/savedrecs_2501-3000.bib","Web_Of_Science_Downloads/savedrecs_3001-3190.bib")
 #dbsource = "isi" indicates from which database the collection has been downloaded (in this case Web of Science)
 datadf_bib <- convert2df(data_bib, dbsource = "isi", format = "bibtex")  
 

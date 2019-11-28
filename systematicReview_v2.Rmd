@@ -49,13 +49,30 @@ install.packages("bibliometrix", dependencies=TRUE, repos = "http://cran.us.r-pr
 library(bibliometrix)
 
 data_bib <- readFiles("Web_Of_Science_Downloads/savedrecs_1-500.bib","Web_Of_Science_Downloads/savedrecs_501-1000.bib","Web_Of_Science_Downloads/savedrecs_1001-1500.bib","Web_Of_Science_Downloads/savedrecs_1501_2000.bib","Web_Of_Science_Downloads/savedrecs_2001-2500.bib","Web_Of_Science_Downloads/savedrecs_2501-3000.bib","Web_Of_Science_Downloads/savedrecs_3001-3190.bib")
+
 #dbsource = "isi" indicates from which database the collection has been downloaded (in this case Web of Science)
 datadf_bib <- convert2df(data_bib, dbsource = "isi", format = "bibtex")  
 
 ```
 
-
+Trialling the litsearchr package, for documentation see [here](https://elizagrames.github.io/litsearchr/#/about) 
 ```{r}
+
+#naiveimport <- litsearchr::import_results(directory = "/test_files", filename = NULL, save_dataset = FALSE)
+#naiveimport <- litsearchr::import_results(directory = "/test_files", filename = "savedrecs.txt", save_dataset = FALSE)
+
+naiveimport <- litsearchr::import_results("test_files/savedrecs.txt")
+
+#dedupe_stage1 <- litsearchr::remove_duplicates(datadf_bib, field = "TI", method = "quick")
+#dedupe_stage2 <- litsearchr::remove_duplicates(dedupe_stage1, field="AB", method="similarity")
+
+#naiveresults <- dedupe_stage1
+#naiveresults <- dedupe_stage2
+
+#rakedkeywords <- litsearchr::extract_terms(text = naiveresults$text, method = "fakerake", min_freq = 2, ngrams = TRUE, n = 2, language = "English")
+
+
+#taggedkeywords <- litsearchr::extract_terms(keywords = naiveresults$keywords, method="tagged")
 
 ```
 

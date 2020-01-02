@@ -5,20 +5,31 @@ library(RISmed)  ;  library(bibliometrix)
 library(bib2df)  ;  library(knitr)
 library(rmdformats)
 
+
+#=======================================================================
+# How to run
+# Press Ctrl-A to select all, then run.  Shiny should start up
+# click one of the top sliders to start, then start categorising.
+# When you get bored close it down and everything is already saved - then upload to git
+# To start again, just select all and run again.
+#=======================================================================
+
 rm(list=ls())
 setwd("~/Documents/GitHub/systematic-review-flash-floods/Syst review code Helen")
 Workingfile <- "2ndScreen_Working.RData"
-
 load(Workingfile)
+# Note, THIS CODE OVERWRITES YOUR INPUT DATA. MAKE A COPY BEFORE YOU START
 
-
+#=======================================================================
+# Sort so screened data is at the bottom
+#=======================================================================
 data_bib$Screen1_Assessed[which(is.na(data_bib$Screen1_Assessed)==TRUE)] <- FALSE
 data_bib$Screen1_Reject[which(is.na(data_bib$Screen1_Reject)==TRUE)] <- FALSE
 data_bib$Screen2_Assessed[which(is.na(data_bib$Screen2_Assessed)==TRUE)] <- FALSE
 data_bib <- data_bib[with(data_bib, order(Screen2_Assessed,Screen1_Reject,Screen1_Assessed)), ]
-
-
 data_bib <- data_bib[order(data_bib)]
+
+
 #=======================================================================
 # Highlighting Rules
 #=======================================================================

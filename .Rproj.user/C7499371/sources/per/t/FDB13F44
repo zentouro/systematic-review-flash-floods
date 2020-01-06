@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1578093239730.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "FDB13F44",
+    "lastKnownWriteTime" : 6566293800539389952,
+    "last_content_update" : 1578093239730,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "F564D7D4",
+        "caption" : "data_bib",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=data_bib&cache_key=F564D7D4",
+        "displayedObservations" : "3190",
+        "environment" : "",
+        "expression" : "data_bib",
+        "object" : "data_bib",
+        "preview" : "0",
+        "totalObservations" : "3190",
+        "variables" : "51"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

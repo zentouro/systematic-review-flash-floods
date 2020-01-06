@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1578085870387.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2744747570",
+    "id" : "F1A5F0F5",
+    "lastKnownWriteTime" : 1578085836,
+    "last_content_update" : 1578086203466,
+    "path" : "~/Documents/GitHub/systematic-review-flash-floods/Syst-review-code-Helen/WorkingSystReviewCode.R",
+    "project_path" : "Syst-review-code-Helen/WorkingSystReviewCode.R",
+    "properties" : {
+        "cursorPosition" : "30,0",
+        "scrollLine" : "12"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -148,7 +148,7 @@ ui <- fluidPage(
       fluidRow(materialSwitch(inputId="eventButton", label="Event", value=FALSE,width="100%",status="danger")),
       hr(),
       # working on adding a notes field 
-      fluidRow(textInput(inputId = "notesField", label = "Notes (doesn't work yet)", value = "")),
+      # fluidRow(textInput(inputId = "notesField", label = "Notes (doesn't work yet)", value = "")),
       
       #--------------------------------------------------------------------
       # The next button
@@ -196,6 +196,7 @@ server <-  function(input,output,session){
      input$rainButton
      input$modelButton
      input$socialButton
+     #input$notesField
       },
     {
       updateMaterialSwitch(session=session, inputId="discardButton",value=FALSE)
@@ -203,7 +204,7 @@ server <-  function(input,output,session){
       updateMaterialSwitch(session=session, inputId="modelButton",value=FALSE)
       updateMaterialSwitch(session=session, inputId="socialButton",value=FALSE)
       updateMaterialSwitch(session=session, inputId="eventButton",value=FALSE)
-      updateTextInput(session=session, inputId="notesField")
+      #updateTextInput(session=session, inputId="notesField")
       save(list="data_bib",file=Workingfile)
 
       
@@ -229,7 +230,7 @@ server <-  function(input,output,session){
            data_bib$Screen2_Model   [values$count-1] <<- input$modelButton
            data_bib$Screen2_Precip  [values$count-1] <<- input$rainButton
            data_bib$Screen2_Social  [values$count-1] <<- input$socialButton
-           data_bib$Screen2_Notes   [values$count-1] <<- input$notesField
+           #data_bib$Screen2_Notes   [values$count-1] <<- input$notesField
            return(YourData2)
         }
         #-----------------------------------------------------
@@ -246,7 +247,7 @@ server <-  function(input,output,session){
           data_bib$Screen2_Model   [nrow(data_bib)] <<- input$modelButton
           data_bib$Screen2_Precip  [nrow(data_bib)] <<- input$rainButton
           data_bib$Screen2_Social  [nrow(data_bib)] <<- input$socialButton
-          data_bib$Screen2_Notes   [nrow(data_bib)] <<- input$notesField
+          #data_bib$Screen2_Notes   [nrow(data_bib)] <<- input$notesField
           return(YourData2)
         }
       }else{

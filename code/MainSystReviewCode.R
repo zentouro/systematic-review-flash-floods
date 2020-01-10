@@ -14,11 +14,13 @@ library(rmdformats)
 # To start again, just select all and run again.
 #=======================================================================
 
+
+# Note, THIS CODE OVERWRITES YOUR INPUT DATA. MAKE A COPY BEFORE YOU START
+# Place backup in data/03_backup-screening-data
 rm(list=ls())
 setwd("~/Documents/GitHub/systematic-review-flash-floods")
 Workingfile <- "data/2ndScreen_Working.RData"
 load(Workingfile)
-# Note, THIS CODE OVERWRITES YOUR INPUT DATA. MAKE A COPY BEFORE YOU START
 
 #=======================================================================
 # Sort so screened data is at the bottom
@@ -169,6 +171,7 @@ ui <- fluidPage(
       hr(),
       # More info on screening classifications
       verbatimTextOutput("moreInfo"),
+      htmlOutput("count"),
     ), 
     
     #--------------------------------------------------------------------
@@ -216,7 +219,7 @@ server <-  function(input,output,session){
           #-----------------------------------------------------
           # move to the next row
            values$count <- values$count + 1
-        
+
            #-----------------------------------------------------
            # choose that row in the table
            YourData <- data_bib[values$count,c("TI","AB")]
@@ -316,6 +319,8 @@ server <-  function(input,output,session){
           "Not Relevent - Reject if does not relevent to the above categories.", 
           sep="\n")
   })
+  hr()
+  output$count <- renderUI({ HTML(paste("You have reviewed", (values$count - 1) ,"papers")) })
 }
 
 #=======================================================================

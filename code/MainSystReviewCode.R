@@ -142,20 +142,21 @@ ui <- fluidPage(
       #--------------------------------------------------------------------
       # The individual check boxes
       fluidRow(materialSwitch(inputId="discardButton", label="Not Relevant",value=FALSE,width="100%",status="danger")),
-      hr(),
       fluidRow(materialSwitch(inputId="rainButton", label="Rainfall paper", value=FALSE,width="100%",status="danger")),
+      hr(),
       fluidRow(materialSwitch(inputId="modelButton", label="Model/Forecast/Maps", value=FALSE,width="100%",status="danger")),
       fluidRow(materialSwitch(inputId="socialButton", label="Social", value=FALSE,width="100%",status="danger")),
       hr(),
       fluidRow(materialSwitch(inputId="eventButton", label="Event", value=FALSE,width="100%",status="danger")),
       hr(),
-      # working on adding a notes field 
-      # fluidRow(textInput(inputId = "notesField", label = "Notes (doesn't work yet)", value = "")),
+      fluidRow(materialSwitch(inputId ="databaseButton", label="Review Database", value=FALSE,width = "100%", status = "danger" )),
+     hr(),
+      fluidRow(textInput(inputId = "notesField", label = "Notes", value = "")),
       
       #--------------------------------------------------------------------
       # The next button
-      hr()#,
-      #fluidRow(actionButton("nextButton", "Next!"))
+      hr(),
+      fluidRow(actionButton("nextButton", "Next"))
     ),
     
     #--------------------------------------------------------------------
@@ -194,12 +195,12 @@ server <-  function(input,output,session){
   # At the same time on a next click (bloody shiny), 
   # select the row you care about and highlight it
   highlighter <- eventReactive(
-    {#input$nextButton 
-     input$discardButton 
-     input$rainButton
-     input$modelButton
-     input$socialButton
-     #input$notesField
+    {input$nextButton 
+     #input$discardButton 
+     #input$rainButton
+     #input$modelButton
+     #input$socialButton
+    
       },
     {
       updateMaterialSwitch(session=session, inputId="discardButton",value=FALSE)
@@ -207,14 +208,15 @@ server <-  function(input,output,session){
       updateMaterialSwitch(session=session, inputId="modelButton",value=FALSE)
       updateMaterialSwitch(session=session, inputId="socialButton",value=FALSE)
       updateMaterialSwitch(session=session, inputId="eventButton",value=FALSE)
-      #updateTextInput(session=session, inputId="notesField")
+      updateMaterialSwitch(session=session, inputId="databaseButton",value=FALSE)
+      updateTextInput(session=session, inputId="notesField", value = "")
       save(list="data_bib",file=Workingfile)
 
       
       #-----------------------------------------------------
       # If the row number is not at the end, increment up
       # THIS IS *REALLY BAD CODING*, ADDED IN BECAUSE IT WANTS TO RECALCULATE THE VALUE.
-      if(sum(c(input$discardButton,input$rainButton,input$modelButton,input$socialButton))>0){
+     # if(sum(c(input$discardButton,input$rainButton,input$modelButton,input$socialButton))>0){
         if(values$count != nrow(data_bib)){
           #-----------------------------------------------------
           # move to the next row
@@ -233,7 +235,8 @@ server <-  function(input,output,session){
            data_bib$Screen2_Model   [values$count-1] <<- input$modelButton
            data_bib$Screen2_Precip  [values$count-1] <<- input$rainButton
            data_bib$Screen2_Social  [values$count-1] <<- input$socialButton
-           #data_bib$Screen2_Notes   [values$count-1] <<- input$notesField
+           data_bib$Screen2_Notes   [values$count-1] <<- input$notesField
+           data_bib$Screen2_FlashFloodDatabase[values$count-1] <<- input$databaseButton
            return(YourData2)
         }
         #-----------------------------------------------------
@@ -250,25 +253,26 @@ server <-  function(input,output,session){
           data_bib$Screen2_Model   [nrow(data_bib)] <<- input$modelButton
           data_bib$Screen2_Precip  [nrow(data_bib)] <<- input$rainButton
           data_bib$Screen2_Social  [nrow(data_bib)] <<- input$socialButton
-          #data_bib$Screen2_Notes   [nrow(data_bib)] <<- input$notesField
+          data_bib$Screen2_Notes   [nrow(data_bib)] <<- input$notesField
+          data_bib$Screen2_FlashFloodDatabase [nrow(data_bib)] <<- input$databaseButton
           return(YourData2)
         }
-      }else{
-        if(values$count != nrow(data_bib)){
-          #-----------------------------------------------------
-          # choose that row in the table
-          YourData <- data_bib[values$count,c("TI","AB")]
-          YourData2 <- helenhighlight(YourData)
-          return(YourData2)
-        }
+        #  }else{
+        #   if(values$count != nrow(data_bib)){
         #-----------------------------------------------------
-        # Or put the final row
-        else{
-          YourData <- data_bib[ nrow(data_bib),c("TI","AB")]
-          YourData2 <- helenhighlight(YourData)
-          return(YourData2)
-        }
-      }
+        # choose that row in the table
+        #      YourData <- data_bib[values$count,c("TI","AB")]
+        #     YourData2 <- helenhighlight(YourData)
+        #    return(YourData2)
+        # }
+        #-----------------------------------------------------
+        # # Or put the final row
+        # else{
+        #   YourData <- data_bib[ nrow(data_bib),c("TI","AB")]
+        #   YourData2 <- helenhighlight(YourData)
+        #   return(YourData2)
+        # }
+      #}
     })  
   
   #--------------------------------------------------------------------
@@ -316,6 +320,7 @@ server <-  function(input,output,session){
           "Model - Observing, forecasting, or mapping.", 
           "Social - How people interact, respond, or communicate.", 
           "Event - Related to a specific event.",
+          "Review Database - Directly relevent to flash floods, to include in our analysis",
           "Not Relevent - Reject if does not relevent to the above categories.", 
           sep="\n")
   })

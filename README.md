@@ -1,5 +1,6 @@
-# systematic-review-flash-floods
-Systematic review of flash floods risk
+#Systematic Review Software
+
+An R-shiny App to make systematically reviewing easier in the Natural and Social Sciences. 
 
 
-This is still very much being developed - but feel free to share and use! Let us know if you have any suggestions. 
+This app is still very much in development, but feel free to share and use! Let us know if you have any suggestions. 

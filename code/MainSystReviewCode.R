@@ -19,18 +19,16 @@ library(rmdformats)
 # Place backup in data/03_backup-screening-data
 rm(list=ls())
 setwd("~/Documents/GitHub/systematic-review-flash-floods")
-Workingfile <- "data/2ndScreen_Working.RData"
+Workingfile <- "data/screeningData.RData"
 load(Workingfile)
 
 #=======================================================================
 # Sort so screened data is at the bottom
 #=======================================================================
 data_bib$Screen1_Assessed[which(is.na(data_bib$Screen1_Assessed)==TRUE)] <- FALSE
-data_bib$Screen1_Reject[which(is.na(data_bib$Screen1_Reject)==TRUE)] <- FALSE
+data_bib$Reject[which(is.na(data_bib$Reject)==TRUE)] <- FALSE
 data_bib$Screen2_Assessed[which(is.na(data_bib$Screen2_Assessed)==TRUE)] <- FALSE
-data_bib <- data_bib[with(data_bib, order(Screen2_Assessed,Screen1_Reject,Screen1_Assessed)), ]
-#data_bib <- data_bib[order(data_bib)]
-
+data_bib <- data_bib[with(data_bib, order(Screen2_Assessed,Reject,Screen1_Assessed)), ]
 
 #=======================================================================
 # Highlighting Rules
@@ -292,12 +290,12 @@ server <-  function(input,output,session){
   #--------------------------------------------------------------------
   # Highlight whether it has been rejected
   highlightExclude <- reactive({
-    YourText2 = as.character(data_bib$Screen1_Reject[values$count])
+    YourText2 = as.character(data_bib$Reject[values$count])
     if(YourText2=="FALSE"){
       YourText3 <- "Reject: NO"
       YourText3 %<>% str_replace_all(regex("Reject: NO",ignore_case = TRUE), wordHighlightgrey)
     }else{
-      YourText3 <- as.character(data_bib$Screen1_Reject[values$count])#"Reject: YES"
+      YourText3 <- as.character(data_bib$Reject[values$count])#"Reject: YES"
       YourText3 %<>% str_replace_all(regex("Reject: YES",ignore_case = TRUE), wordHighlightred)
     }
     return(YourText3)

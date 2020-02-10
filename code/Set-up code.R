@@ -84,10 +84,8 @@ data_bib$Screen2_Precip <- NA
 data_bib$Screen2_Model <- NA
 data_bib$Screen2_Social <- NA
 data_bib$Screen2_FlashFloodDatabase <- NA
+data_bib$Screen2_typeID <- NA
 data_bib$Screen2_Notes <- ""
-
-# NEED TO ADD THE COLUMNS YOU WANT
-# THEN SAVE AS R-DATA
 
 test <- data_bib[1:10,]
 
@@ -95,23 +93,3 @@ test <- data_bib[1:10,]
 save(data_bib, file = "data/screeningData.rData")
 
 
-
-
-#-------------------------------------------------------------------------------------------------------
-# Base code to cycle through with input.  Need to add in the correct printouts, make lots of whitespace/prettyness
-# and some more get-out clauses.
-#-------------------------------------------------------------------------------------------------------
-# 
-# clr <- function(){cat(rep("\n", 30))}
-# 
-# for (i in 1:10){
-#    clr() 
-#    print(test$TI[i])
-#    cat(rep("\n", 3))
-#    print(test$AB[i])
-#    cat(rep("\n", 3))
-#    z <- readline(prompt="Disregard? [1]") 
-#    # just store the input in a list with the same key
-#    test$Screen2_Reject[i] <- z
-# }
-  

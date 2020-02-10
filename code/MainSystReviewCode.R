@@ -140,15 +140,18 @@ ui <- fluidPage(
       #--------------------------------------------------------------------
       # The individual check boxes
       fluidRow(materialSwitch(inputId="discardButton", label="Not Relevant",value=FALSE,width="100%",status="danger")),
-      fluidRow(materialSwitch(inputId="rainButton", label="Rainfall paper", value=FALSE,width="100%",status="danger")),
+      fluidRow(materialSwitch(inputId="rainButton", label="Hydrology", value=FALSE,width="100%",status="danger")),
       hr(),
       fluidRow(materialSwitch(inputId="modelButton", label="Model/Forecast/Maps", value=FALSE,width="100%",status="danger")),
-      fluidRow(materialSwitch(inputId="socialButton", label="Social", value=FALSE,width="100%",status="danger")),
+      fluidRow(materialSwitch(inputId="socialButton", label="Socio-political or Impact", value=FALSE,width="100%",status="danger")),
       hr(),
-      fluidRow(materialSwitch(inputId="eventButton", label="Event", value=FALSE,width="100%",status="danger")),
+      fluidRow(materialSwitch(inputId="eventButton", label="Event", value=FALSE, width="100%",status="danger")),
+      hr(),
+      #apologies for the weird double negative here. if it is TRUE, the paper DOES NOT disaggregate by flood type
+      fluidRow(materialSwitch(inputId="floodTypeButton", label="Not Disaggregated", value = FALSE , width="100%", status = "danger" )),
       hr(),
       fluidRow(materialSwitch(inputId ="databaseButton", label="Review Database", value=FALSE,width = "100%", status = "danger" )),
-     hr(),
+      hr(),
       fluidRow(textInput(inputId = "notesField", label = "Notes", value = "")),
       
       #--------------------------------------------------------------------
@@ -194,11 +197,6 @@ server <-  function(input,output,session){
   # select the row you care about and highlight it
   highlighter <- eventReactive(
     {input$nextButton 
-     #input$discardButton 
-     #input$rainButton
-     #input$modelButton
-     #input$socialButton
-    
       },
     {
       updateMaterialSwitch(session=session, inputId="discardButton",value=FALSE)
@@ -207,6 +205,7 @@ server <-  function(input,output,session){
       updateMaterialSwitch(session=session, inputId="socialButton",value=FALSE)
       updateMaterialSwitch(session=session, inputId="eventButton",value=FALSE)
       updateMaterialSwitch(session=session, inputId="databaseButton",value=FALSE)
+      updateMaterialSwitch(session=session, inputId="floodTypeButton",value=FALSE)
       updateTextInput(session=session, inputId="notesField", value = "")
       save(list="data_bib",file=Workingfile)
 
@@ -235,6 +234,7 @@ server <-  function(input,output,session){
            data_bib$Screen2_Social  [values$count-1] <<- input$socialButton
            data_bib$Screen2_Notes   [values$count-1] <<- input$notesField
            data_bib$Screen2_FlashFloodDatabase[values$count-1] <<- input$databaseButton
+           data_bib$Screen2_typeID  [values$count-1] <<- input$floodTypeButton
            return(YourData2)
         }
         #-----------------------------------------------------
@@ -253,24 +253,9 @@ server <-  function(input,output,session){
           data_bib$Screen2_Social  [nrow(data_bib)] <<- input$socialButton
           data_bib$Screen2_Notes   [nrow(data_bib)] <<- input$notesField
           data_bib$Screen2_FlashFloodDatabase [nrow(data_bib)] <<- input$databaseButton
+          data_bib$Screen2_typeID  [nrow(data_bib)] <<- input$floodTypeButton
           return(YourData2)
         }
-        #  }else{
-        #   if(values$count != nrow(data_bib)){
-        #-----------------------------------------------------
-        # choose that row in the table
-        #      YourData <- data_bib[values$count,c("TI","AB")]
-        #     YourData2 <- helenhighlight(YourData)
-        #    return(YourData2)
-        # }
-        #-----------------------------------------------------
-        # # Or put the final row
-        # else{
-        #   YourData <- data_bib[ nrow(data_bib),c("TI","AB")]
-        #   YourData2 <- helenhighlight(YourData)
-        #   return(YourData2)
-        # }
-      #}
     })  
   
   #--------------------------------------------------------------------
@@ -313,13 +298,25 @@ server <-  function(input,output,session){
   # More info about the screening selections
   hr()
   output$moreInfo <- renderText({
-    paste("Classification Info", 
-          "Rainfall - Core, underlying process. Not directly related to flash floods.", 
+    paste("Inclusion Criteria Guide",
+          "1. Is the paper relevant to flash flooding or hydrology in general? (If NO - Not Relevant)",
+          "2. If Yes, is the paper about more than the underlying hydrology behind flooding (If NO - Hydrology)",
+          "3. If Yes the paper will likely be included in our analysis. What kind of paper is it?",
+          "         1. Is the paper primarily geophysically focused?", 
+          "            Or socio-politically/impact focused?",  
+          "            (Select appropriate toggle, it can be both)",
+          "         2. Is the paper about an event? (If YES - Event)",
+          "4. Does the paper disaggregate by flood type? (if NO - Not Disaggregated)",
+          "5. Is the paper extremely relevant to our analysis and questions about the impact, vulnerability actions, or response associated with flash floods? (If YES - Review Database)",
+         "\n",
+          "Classification Info", 
+          "Hydrology - Core, underlying process. Not directly related to flash floods.", 
           "Model - Observing, forecasting, or mapping.", 
           "Social - How people interact, respond, or communicate.", 
           "Event - Related to a specific event.",
-          "Review Database - Directly relevent to flash floods, to include in our analysis",
+          "Review Database - Highly relevent to paper, seminal work on flash flood impact",
           "Not Relevent - Reject if does not relevent to the above categories.", 
+          "Not disaggregated - doesn't disaggregate by flood type, lumps flash floods and riverine floods together",
           sep="\n")
   })
   hr()

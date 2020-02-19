@@ -173,7 +173,7 @@ ui <- fluidPage(
       hr(),
       # More info on screening classifications
       verbatimTextOutput("moreInfo"),
-      htmlOutput("count"),
+      htmlOutput("count")
     ), 
     
     #--------------------------------------------------------------------

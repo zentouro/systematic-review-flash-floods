@@ -30,9 +30,9 @@ These questions directly inform the columns we created during the screening data
 With questions and screening data in hand, using `MainSystReviewCode.R` you can begin the screening process.
 Adjust the text in the shiny app to align with your questions and columns. And go to town reviewing papers. 
 
-##### Step 2A - How we keep organized
+  + ##### Step 2A - How we keep organized
 
-After finishing a screening session, I recommend copying the `screeningData.rData` file into the `03_backup-screening-data` directory. Should I make this happen automatically? Yes. Have I done that yet. No. Maybe once I've finished actually doing the systematic review. 
+  + After finishing a screening session, I recommend copying the `screeningData.rData` file into the `03_backup-screening-data` directory. Should I make this happen automatically? Yes. Have I done that yet. No. Maybe once I've finished actually doing the systematic review. 
 
 
 ### Support

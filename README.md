@@ -47,8 +47,8 @@ Tweet at me <a href="http://twitter.com/zentouro" target="_blank">`@zentouro`</a
 
 ### Contributing
 
-Feel free to FORK EMOJI this repo 
-or clone it to your own machine 
+Feel free to 🍴 this repo 
+or ,a href="https://github.com/zentouro/systematic-review-flash-floods.git" targets="_blank"> clone it to your own machine </a> 
 and review to your hearts content. 
 
 Pull requests are also welcome. 

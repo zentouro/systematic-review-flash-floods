@@ -6,18 +6,23 @@ library(bib2df)  ;  library(knitr)
 library(rmdformats)
 
 
+# THIS CODE OVERWRITES YOUR INPUT DATA. MAKE A COPY BEFORE YOU START 
+# (or even better - immedietly after you finish screening)
+# Place backup in data/03_backup-screening-data 
+# title backup file 'XXXX-screeningData-YY'
+# XXXX - month and day 
+# YY - initials
+
 #=======================================================================
 # How to run
 # Press Ctrl-A to select all, then run.  Shiny should start up
-# click one of the top sliders to start, then start categorising.
+# Click "next" once to precede to screening. 
 # When you get bored close it down and everything is already saved - then upload to git
 # To start again, just select all and run again.
 #=======================================================================
 
-
-# Note, THIS CODE OVERWRITES YOUR INPUT DATA. MAKE A COPY BEFORE YOU START
-# Place backup in data/03_backup-screening-data
 rm(list=ls())
+#adjust this to the appropriate folder on your system
 setwd("~/Documents/GitHub/systematic-review-flash-floods")
 Workingfile <- "data/screeningData.RData"
 load(Workingfile)

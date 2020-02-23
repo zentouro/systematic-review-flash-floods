@@ -16,6 +16,8 @@ library(rmdformats)
 #-----------------------------------------------------------------------------------
 # Initializing Stuff
 #-----------------------------------------------------------------------------------
+
+#adjust this to the appropriate folder on your system
 setwd("~/Documents/GitHub/systematic-review-flash-floods")
 
 #-----------------------------------------------------------------------------------

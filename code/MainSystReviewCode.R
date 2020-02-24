@@ -3,6 +3,7 @@ library(DT)      ;  library(magrittr)
 library(stringr) ;  library(shinyWidgets)
 library(RISmed)  ;  library(bibliometrix)
 library(bib2df)  ;  library(knitr)
+library(shinythemes)
 library(rmdformats)
 
 
@@ -131,6 +132,10 @@ helenhighlight <- function(YourData){
 # GUI function
 #=======================================================================
 ui <- fluidPage(
+  #--------------------------------------------------------------------
+  # Feel free to change the theme to serve your preferences, you'll be staring at this for a while
+  # so might as well make it look good.
+  theme = shinytheme("cosmo"),
   #--------------------------------------------------------------------
   # This creates a shiny sidebar.  There are other options
   sidebarLayout(

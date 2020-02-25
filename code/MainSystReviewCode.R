@@ -57,6 +57,8 @@ helenhighlight <- function(YourData){
   YourData %<>% str_replace_all(regex("flood", ignore_case = TRUE), wordHighlightyellow)
   YourData %<>% str_replace_all(regex("flood-", ignore_case = TRUE), wordHighlightyellow)
   YourData %<>% str_replace_all(regex("risk", ignore_case = TRUE), wordHighlightyellow)
+  #add landslide
+  #add mudslide
   
   YourData %<>% str_replace_all(regex("exposure", ignore_case = TRUE), wordHighlightgreen)
   YourData %<>% str_replace_all(regex("vulnerability", ignore_case = TRUE), wordHighlightgreen)

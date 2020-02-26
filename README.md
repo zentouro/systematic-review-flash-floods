@@ -1,6 +1,6 @@
 ## Systematic Review Software
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 An R-shiny App to make systematically reviewing easier in the Natural and Social Sciences. 
@@ -67,6 +67,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="http://zentouro.ldeo.columbia.edu/"><img src="https://avatars0.githubusercontent.com/u/7304202?v=4" width="100px;" alt=""/><br /><sub><b>miriam</b></sub></a><br /><a href="https://github.com/zentouro/systematic-review-flash-floods/commits?author=zentouro" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/hgreatrex"><img src="https://avatars2.githubusercontent.com/u/5038576?v=4" width="100px;" alt=""/><br /><sub><b>Helen Greatrex</b></sub></a><br /><a href="https://github.com/zentouro/systematic-review-flash-floods/commits?author=hgreatrex" title="Code">💻</a></td>
   </tr>
 </table>
 

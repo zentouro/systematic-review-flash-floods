@@ -62,8 +62,8 @@ This project exists because of these excellent folks:
 <!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-([emoji key](https://allcontributors.org/docs/en/emoji-key))
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome! ([emoji key](https://allcontributors.org/docs/en/emoji-key))
 
 Feel free to 🍴 this repo 
 or <a href="https://github.com/zentouro/systematic-review-flash-floods.git" targets="_blank"> clone it to your own machine </a> 

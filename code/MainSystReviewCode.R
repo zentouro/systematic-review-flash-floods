@@ -187,7 +187,8 @@ ui <- fluidPage(
       hr(),
       # More info on screening classifications
       verbatimTextOutput("moreInfo"),
-      htmlOutput("count")
+      htmlOutput("count"),
+      htmlOutput("total")
     ), 
     
     #--------------------------------------------------------------------
@@ -334,7 +335,8 @@ server <-  function(input,output,session){
           sep="\n")
   })
   hr()
-  output$count <- renderUI({ HTML(paste("You have reviewed", (values$count - 1) ,"papers")) })
+  output$count <- renderUI({ HTML(paste("You have reviewed", (values$count - 1) ,"papers in this session")) })
+  output$total <- renderUI({HTML(paste("In total, we have reviewed", (sum(data_bib$Screen2_Assessed, na.rm = TRUE)), "of", (length(data_bib$Screen2_Assessed))))})
 }
 
 #=======================================================================

@@ -1,7 +1,5 @@
 ## Systematic Review Software
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
+
 
 An R-shiny App to make systematically reviewing easier in the Natural and Social Sciences. 
 

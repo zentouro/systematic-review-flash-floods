@@ -44,22 +44,9 @@ Something not working? Have any questions?
 
 Tweet at me <a href="http://twitter.com/zentouro" target="_blank">`@zentouro`</a>
 
-### Whodunit 
+### Whodunit ✨
 
-
-
-### Contributing
-
-Feel free to 🍴 this repo 
-or <a href="https://github.com/zentouro/systematic-review-flash-floods.git" targets="_blank"> clone it to your own machine </a> 
-and review to your hearts content. 
-
-Pull requests are also welcome. 
-For major changes, please open an issue first to discuss what you would like to change.
-
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+This project exists because of these excellent folks:
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
@@ -75,4 +62,13 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
+([emoji key](https://allcontributors.org/docs/en/emoji-key))
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+Feel free to 🍴 this repo 
+or <a href="https://github.com/zentouro/systematic-review-flash-floods.git" targets="_blank"> clone it to your own machine </a> 
+and review to your hearts content. 
+
+Pull requests are also welcome. 
+For major changes, please open an issue first to discuss what you would like to change.
+

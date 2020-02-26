@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "zentouro",
+      "name": "miriam",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/7304202?v=4",
+      "profile": "http://zentouro.ldeo.columbia.edu/",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "systematic-review-flash-floods",
+  "projectOwner": "zentouro",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}

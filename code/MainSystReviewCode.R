@@ -24,7 +24,7 @@ library(rmdformats)
 
 rm(list=ls())
 #adjust this to the appropriate folder on your system
-setwd("C:\\Users\\Damian\\Documents\\GitHub\\systematic-review-flash-floods")
+setwd("~/Documents/GitHub/systematic-review-flash-floods")
 Workingfile <- "data/screeningData.RData"
 load(Workingfile)
 
@@ -335,7 +335,7 @@ server <-  function(input,output,session){
           sep="\n")
   })
   hr()
-  output$count <- renderUI({ HTML(paste("You have reviewed", (values$count - 1) ,"papers in this session")) })
+  output$count <- renderUI({ HTML(paste("You have reviewed", (values$count - 2) ,"papers in this session")) })
   output$total <- renderUI({HTML(paste("In total, we have reviewed", (sum(data_bib$Screen2_Assessed, na.rm = TRUE)), "of", (length(data_bib$Screen2_Assessed))))})
 }
 

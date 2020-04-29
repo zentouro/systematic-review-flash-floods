@@ -24,7 +24,7 @@ library(rmdformats)
 
 rm(list=ls())
 #adjust this to the appropriate folder on your system
-setwd("~/Documents/GitHub/systematic-review-flash-floods")
+setwd("C:\\Users\\Damian\\Documents\\GitHub\\systematic-review-flash-floods")
 Workingfile <- "data/screeningData.RData"
 load(Workingfile)
 

@@ -23,8 +23,13 @@ library(rmdformats)
 #=======================================================================
 
 rm(list=ls())
-#adjust this to the appropriate folder on your system
-setwd("C:\\Users\\Damian\\Documents\\GitHub\\systematic-review-flash-floods")
+# adjust this to the appropriate folder on your system
+setwd("~/Documents/GitHub/systematic-review-flash-floods")
+# if you're on a Windows PC try: 
+# setwd("C:\\Documents\\GitHub\\systematic-review-flash-floods"")
+# may need to adjust to your specific machine
+# if you're on a MacOS:
+# setwd("~/Documents/GitHub/systematic-review-flash-floods")
 Workingfile <- "data/screeningData.RData"
 load(Workingfile)
 

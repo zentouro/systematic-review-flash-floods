@@ -56,7 +56,7 @@ data_bib$Reject <- NA
 data_bib$Reject[FullMatches]  <- TRUE
 
 #-----------------------------------------------------------------------------------
-# First read in the ones that we initially read into covidence and accepted
+# Read in the abstracts that we initially read into covidence and accepted
 #-----------------------------------------------------------------------------------
 Screenedfiles_accept <- readFiles("~/Documents/GitHub/systematic-review-flash-floods/data/01_Covidence/Screened-Papers-Yes-Maybe/review_58723_select_mendeley_20191003141113.ris")
 

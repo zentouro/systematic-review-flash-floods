@@ -70,3 +70,39 @@ and review to your hearts content.
 Pull requests are also welcome. 
 For major changes, please open an issue first to discuss what you would like to change.
 
+
+
+### Understanding Our File Structure
+
+This directories in this GitHub are organized to follow the timeline of use and creation. 
+
+within `/data` 
+
+> `01_Web-Of-Science` contines the original .bib files pulled from the Web of Science Database. This service only allows downloading in 500 item groupings. 
+
+> `02_Covidence` contains the output from our initial Phase 1 screening using the software tool Covidence. The folder contans csv and .ris files of the abstracts that were deemed Yes or Maybe and the abstracts that were deemed NO. These were used in the creation of the dataframe used in the Phase 2 screening. 
+
+> `03_clean-screening-data` includes two files: `UNSCREENED-OLD-screeningDATA` and `UNSCREENED-screeningData`. The `OLD` file contains the initial screening test file that was used during the development of Step 1, outlined above. The other file contains all abstracts used in the initial Step 1 screening after the process had been determined. 
+
+> `04_backup-screening-data` containes backup copies of the dataframe as we screened. 
+
+> `05_screened-data` holds the data for the finished full abstract screening. One file `BACKUP` is not to be touched and serves as a failsafe if the `ACTIVE` data develops issues during analysis. 
+
+within `/code`
+
+> `01_screening-code` contains all R files used in the intial full screening 
+
+> `02_analysis-code` contains all R files used in data analysis. This folder is currently in development.
+
+within `/exports`
+
+> exports will contain plots created during analysis. it also contains exports from software VOSViewer. 
+
+within `of interest`
+
+> screenshots and papers that are relevant to this review
+
+within `zz-misc`
+
+> will contain misclenaous, testing, or other items we are not yet ready to delete
+

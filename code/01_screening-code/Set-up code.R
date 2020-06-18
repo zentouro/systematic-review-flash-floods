@@ -25,13 +25,13 @@ setwd("~/Documents/GitHub/systematic-review-flash-floods")
 # dbsource = "isi" indicates from which database the collection has been downloaded (in this case Web of Science)
 #-----------------------------------------------------------------------------------
 
-datafile_bib <- readFiles("data/02_Web-Of-Science/savedrecs_1-500.bib",
-                          "data/02_Web-Of-Science/savedrecs_501-1000.bib",
-                          "data/02_Web-Of-Science/savedrecs_1001-1500.bib",
-                          "data/02_Web-Of-Science/savedrecs_1501_2000.bib",
-                          "data/02_Web-Of-Science/savedrecs_2001-2500.bib",
-                          "data/02_Web-Of-Science/savedrecs_2501-3000.bib",
-                          "data/02_Web-Of-Science/savedrecs_3001-3190.bib")
+datafile_bib <- readFiles("data/01_Web-Of-Science/savedrecs_1-500.bib",
+                          "data/01_Web-Of-Science/savedrecs_501-1000.bib",
+                          "data/01_Web-Of-Science/savedrecs_1001-1500.bib",
+                          "data/01_Web-Of-Science/savedrecs_1501_2000.bib",
+                          "data/01_Web-Of-Science/savedrecs_2001-2500.bib",
+                          "data/01_Web-Of-Science/savedrecs_2501-3000.bib",
+                          "data/01_Web-Of-Science/savedrecs_3001-3190.bib")
 
 data_bib    <- convert2df(datafile_bib, dbsource = "isi", format = "bibtex")  
 data_bib$AB <- str_to_sentence(data_bib$AB)
@@ -42,7 +42,7 @@ data_bib$TI <- str_to_sentence(data_bib$TI)
 #-----------------------------------------------------------------------------------
 # First read in the ones that we initially read into covidence and rejected
 #-----------------------------------------------------------------------------------
-Screenedfiles_irrelevant <- readFiles("~/Documents/GitHub/systematic-review-flash-floods/data/01_Covidence/Screened-Papers-No/review_58723_irrelevant_mendeley_20191023234131.ris")
+Screenedfiles_irrelevant <- readFiles("~/Documents/GitHub/systematic-review-flash-floods/data/02_Covidence/Screened-Papers-No/review_58723_irrelevant_mendeley_20191023234131.ris")
 
 Screenedfiles_irrelevant_TI <- Screenedfiles_irrelevant[grep("T1  -", Screenedfiles_irrelevant)]
 Screenedfiles_irrelevant_TI <- substr(Screenedfiles_irrelevant_TI,7,nchar(Screenedfiles_irrelevant_TI))
@@ -58,7 +58,7 @@ data_bib$Reject[FullMatches]  <- TRUE
 #-----------------------------------------------------------------------------------
 # Read in the abstracts that we initially read into covidence and accepted
 #-----------------------------------------------------------------------------------
-Screenedfiles_accept <- readFiles("~/Documents/GitHub/systematic-review-flash-floods/data/01_Covidence/Screened-Papers-Yes-Maybe/review_58723_select_mendeley_20191003141113.ris")
+Screenedfiles_accept <- readFiles("~/Documents/GitHub/systematic-review-flash-floods/data/02_Covidence/Screened-Papers-Yes-Maybe/review_58723_select_mendeley_20191003141113.ris")
 
 Screenedfiles_accept_TI <- Screenedfiles_accept[grep("T1  -", Screenedfiles_accept)]
 Screenedfiles_accept_TI <- substr(Screenedfiles_accept_TI,7,nchar(Screenedfiles_accept_TI))
@@ -92,6 +92,6 @@ data_bib$Screen2_Notes <- ""
 test <- data_bib[1:10,]
 
 
-save(data_bib, file = "data/screeningData.rData")
+save(data_bib, file = "data/screeningData-updated.rData")
 
 

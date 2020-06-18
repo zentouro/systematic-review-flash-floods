@@ -29,8 +29,8 @@ previous_data_bib <- data_bib
 # dbsource = "isi" indicates from which database the collection has been downloaded (in this case Web of Science)
 #-----------------------------------------------------------------------------------
 
-datafile_bib <- readFiles("data/02_Web-Of-Science/May13-update/savedrecs1-500.bib",
-                          "data/02_Web-Of-Science/May13-update/savedrecs501-557.bib")
+datafile_bib <- readFiles("data/01_Web-Of-Science/May13-update/savedrecs1-500.bib",
+                          "data/01_Web-Of-Science/May13-update/savedrecs501-557.bib")
 
 
 data_bib <- convert2df(datafile_bib, dbsource = "isi", format = "bibtex")

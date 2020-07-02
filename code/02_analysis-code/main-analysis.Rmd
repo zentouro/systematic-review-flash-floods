@@ -1,21 +1,35 @@
 ---
 title: "Core analysis code"
-author: "Miriam and helen"
+author: "Miriam and Helen"
 date: "6/24/2020"
 output: html_document
 ---
 
-`
+### A Fancy Title 
+
+
+
 ```{r}
 # Load the data and the core directory locations.  This will automatically work things out from globalvariables file.
 # Use file.choose() to find the 0_GlobalVariables_Functions.R.  Copy/paste the EXACT address and location in here
 
-address <- "/Users/hlg5155/Documents/GitHub/systematic-review-flash-floods/code/0_GlobalVariables_Functions.R"
+address <- "~/Documents/GitHub/systematic-review-flash-floods/code/0_GlobalVariables_Functions.R"
 source(address)
 
 ```
 
 
+
+
+In order to look at the full text, we wanted to pull a selection of papers into a reference management software like Zotero. 
+The easiest way we found, was to create a CSV of the selected DOIs and copy that into the reference manager. 
+```{r}
+
+# write.csv(data_bib$DI, "exports/DOIs-all.csv", row.names = data_bib$TI)
+social_data_bib <- data_bib[data_bib$Screen2_Social == TRUE, ]
+write.csv(social_data_bib$DI, "exports/DOIs-social.csv", row.names = social_data_bib$TI)
+
+```
 
 
 

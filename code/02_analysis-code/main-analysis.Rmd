@@ -5,8 +5,6 @@ date: "6/24/2020"
 output: html_document
 ---
 
-### A Fancy Title 
-
 
 
 ```{r}
@@ -19,17 +17,124 @@ source(address)
 ```
 
 
+```{r}
+# Separate out the papers into our groupings
+bib_all <- data_bib; rm(data_bib)
+bib_accept    <- bib_all[which(bib_all$Screen2_Reject == FALSE),]
+bib_event     <- bib_all[which(bib_all$Screen2_Event == TRUE),]
+bib_social    <- bib_all[which(bib_all$Screen2_Social == TRUE),]
+bib_hydrology <- bib_all[which(bib_all$Screen2_Model == TRUE),]
+bib_precip    <- bib_all[which(bib_all$Screen2_Precip == TRUE),]
 
+```
+
+
+
+# Plotting maps of locations
+
+This code works for the author countries.  These maps aren't really interesting, but I can use this as a baseline to focus on locations for events and in the abstracts.
+
+Useful resources
+
+ - https://mgimond.github.io/Spatial/mapping-data-in-r.html
+ - http://mazamascience.com/WorkingWithData/?p=1494
+ - https://stackoverflow.com/questions/40119722/r-spplot-labels-in-wrong-places
+ - https://stackoverflow.com/questions/3650636/how-to-attach-a-simple-data-frame-to-a-spatialpolygondataframe-in-r/3652472#3652472
+ 
+
+## Function. Can be moved,
+```{r}
+Author_location <- function(data_bib,shapefile, plottitle){
+   data_bib <- bib_all
+   shapefile <- global_shape
+   
+   require(rgdal)
+   require(tmap) 
+   require(bibliometrix)
+   
+   #----------------------------------------------------------------------
+   ## Get the countries of authors of from databib
+   #----------------------------------------------------------------------
+   M <- metaTagExtraction(data_bib, Field = "AU_CO", sep = ";")
+   Countries <- as.data.frame(table(unlist(unlist(lapply(as.list(M$AU_CO),strsplit,";")))))
+   names(Countries) <- c("CNTRY_NAME","AUTHOR")
+   Countries$CNTRY_NAME <- as.character(Countries$CNTRY_NAME)
+
+   #----------------------------------------------------------------------
+   # Correct any differently spelt names
+   #----------------------------------------------------------------------
+   #wrongnames <- merge(shapefile@data,Countries,by="CNTRY_NAME",all.x=FALSE,all.y=TRUE)[which(is.na(merge(shapefile@data,Countries,by="CNTRY_NAME",all.x=FALSE,all.y=TRUE)$OBJECTID)==TRUE),]
+   Countries$CNTRY_NAME[which(Countries$CNTRY_NAME %in% "KOREA")] <- "SOUTH KOREA"
+   Countries$CNTRY_NAME[which(Countries$CNTRY_NAME %in% "MYANMAR")] <- "MYANMAR (BURMA)"
+   Countries$CNTRY_NAME[which(Countries$CNTRY_NAME %in% "TANZANIA")] <- "TANZANIA, UNITED REPUBLIC OF"
+   Countries$CNTRY_NAME[which(Countries$CNTRY_NAME %in% "U ARAB EMIRATES")] <- "UNITED ARAB EMIRATES"  
+   Countries$CNTRY_NAME[which(Countries$CNTRY_NAME %in% "USA")] <- "UNITED STATES" 
+
+   #----------------------------------------------------------------------
+   # Merge the author list into the shapefile
+   # help : https://stackoverflow.com/questions/40119722/r-spplot-labels-in-wrong-places
+   # https://stackoverflow.com/questions/3650636/how-to-attach-a-simple-data-frame-to-a-spatialpolygondataframe-in-r/3652472#3652472
+   #----------------------------------------------------------------------
+   shapefile@data$CNTRY_NAME <- toupper(shapefile@data$CNTRY_NAME)
+   shapefile@data = data.frame(shapefile@data, Countries[match(shapefile@data[,"CNTRY_NAME"], Countries[,"CNTRY_NAME"]),])
+   shapefile@data$AUTHOR[is.na(shapefile@data$AUTHOR)==TRUE] <- 0 
+
+   #----------------------------------------------------------------------
+   ## make a clever log10 scale
+   #----------------------------------------------------------------------
+   counter <- c(1,10,50,100,500,1000,5000,10000)
+   colscale <- c(0)
+   n <- 1
+   while(counter[n] < max(shapefile@data$AUTHOR,na.rm=TRUE)){
+      colscale <- c(colscale,counter[n])
+      n <- n+1
+   }
+   colscale <- c(colscale,ceiling(max(shapefile@data$AUTHOR,na.rm=TRUE)/100) * 100)
+
+   #----------------------------------------------------------------------
+   # plot onto global grid
+   #----------------------------------------------------------------------
+   outputplot <- tm_shape(shapefile) + 
+                 tm_polygons(col="AUTHOR",palette="PuBuGn",
+                             border.col = "black",lwd=.5,border.alpha = .5, 
+                             style="cont",breaks=colscale,
+                             title = "Number of papers") +
+                 tm_legend(outside = TRUE,main.title=plottitle)
+   
+   return(outputplot)
+}   
+```   
+   
+   
+## Running the function
+
+```{r}
+
+print(Author_location(bib_all,global_shape,"All papers screened"))
+
+print(Author_location(bib_accept,global_shape,"Accepted through screening papers"))
+
+print(Author_location(bib_event,global_shape,"Papers about a specific event"))
+
+print(Author_location(bib_social,global_shape,"Socially tagged papers"))
+
+print(Author_location(bib_hydrology,global_shape,"Hydrology tagged papers"))
+
+print(Author_location(bib_precip,global_shape,"Precip tagged papers"))
+
+```
+
+
+
+## Miriam's export
 
 In order to look at the full text, we wanted to pull a selection of papers into a reference management software like Zotero. 
 The easiest way we found, was to create a CSV of the selected DOIs and copy that into the reference manager. 
 ```{r}
 
-# write.csv(data_bib$DI, "exports/DOIs-all.csv", row.names = data_bib$TI)
-social_data_bib <- data_bib[data_bib$Screen2_Social == TRUE, ]
-write.csv(social_data_bib$DI, "exports/DOIs-social.csv", row.names = social_data_bib$TI)
+# write.csv(bib_all$DI, "exports/DOIs-all.csv", row.names = data_bib$TI)
+# write.csv(bib_social$DI, "exports/DOIs-social.csv", row.names = social_data_bib$TI)
 
 ```
-
 
 

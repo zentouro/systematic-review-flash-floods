@@ -124,17 +124,50 @@ print(Author_location(bib_precip,global_shape,"Precip tagged papers"))
 
 ```
 
+## Text Analysis
 
+```{r}
 
-## Miriam's export
+# Create keyword co-occurrences network
+NetMatrix <- biblioNetwork(bib_accept, analysis = "co-occurrences", network = "keywords", sep = ";")
+
+# Plot the network
+net=networkPlot(NetMatrix, normalize="association", weighted=T, n = 30, Title = "Keyword Co-occurrences", type = "fruchterman", size=T,edgesize = 5,labelsize=0.7)
+```
+
+```{r}
+library(ggplot2)
+library(reshape2)
+
+words <- KeywordGrowth(bib_accept, Tag = "ID", sep = ";", top = 10, cdf = TRUE)
+
+wordsReshaped <- t(words)
+
+#ggplot(words, aes(x = words$Year, y = words$)) + geom_tile()
+
+```
+
+## Bibliometrix Summary Information
+
+```{r}
+results <- biblioAnalysis(bib_accept, sep = ";")
+options(width=100)
+S <- summary(object = results, k = 10, pause = FALSE)
+plot(x = results, k = 10, pause = FALSE)
+
+```
+
+## Exporting DOIs
 
 In order to look at the full text, we wanted to pull a selection of papers into a reference management software like Zotero. 
 The easiest way we found, was to create a CSV of the selected DOIs and copy that into the reference manager. 
 ```{r}
 
 # write.csv(bib_all$DI, "exports/DOIs-all.csv", row.names = data_bib$TI)
-# write.csv(bib_social$DI, "exports/DOIs-social.csv", row.names = social_data_bib$TI)
+social_data_bib <- data_bib[data_bib$Screen2_Social == TRUE, ]
+write.csv(bib_social$DI, "exports/DOIs-social.csv", row.names = social_data_bib$TI)
 
 ```
+
 
 

@@ -24,12 +24,10 @@ library(RefManageR)
 #capture.output(DI, file = "exports/test.txt")
 
 
-
 #export CSV with DOI from data_bib
 #write.csv(data_bib$DI,"exports/test.csv", row.names = FALSE)
 write.csv(data_bib$DI, "exports/DOIs-all.csv", row.names = data_bib$TI)
-
-
-
+social_data_bib <- data_bib[data_bib$Screen2_Social == TRUE, ]
+write.csv(social_data_bib$DI, "exports/DOIs-social.csv", row.names = social_data_bib$TI)
 
 

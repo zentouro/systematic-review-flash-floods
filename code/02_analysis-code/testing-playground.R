@@ -1,33 +1,59 @@
-library(bibliometrix)
-library(bib2df)
-library(bibtex)
-library(revtools)
-library(RefManageR)
+library(wordcloud)
+library(tm)
 
 
-#setwd("~/Documents/GitHub/systematic-review-flash-floods")
 
-# import saved recs 
+# create a corpus of titles in bib_social 
+corpus_social <- Corpus(VectorSource(bib_social$TI))
+# make lowercase
+corpus_social2 <- tm_map(corpus_social, content_transformer(tolower))
+# remove punctuations
+corpus_social3 <- tm_map(corpus_social2, removePunctuation)
+# remove stopwords
+corpus_social4 <- tm_map(corpus_social3, removeWords, stopwords())
+# generate TF-IDF matrix
+social_dtm <- DocumentTermMatrix(corpus_social4)
+# inspect to TF-IDF
+inspect(social_dtm)
 
-#test_bib <- convert2df("data/01_Web-Of-Science/savedrecs_1-500.bib", dbsource = "wos", format = "bibtex")
-
-# convert to bibliography type 
-
-#write_bibliography(test_bib, "exports/test_bib.ris" , format = "ris")
-#df2bib(test_bib, "exports/text_bib.bib", append = FALSE)
-#WriteBib(test_bib, file = "exports/test2_bib.bib", biblatex = TRUE,append = FALSE, verbose = TRUE)
-#df2bib(data_bib, "exports/text2_bib.bib", append = FALSE)
-
-# export subsection to see if it will still open in zotero 
-
-#DI <- data_bib$DI
-#capture.output(DI, file = "exports/test.txt")
+# generate a frequency data frame
+word_frequency <- sort(colSums(as.matrix(social_dtm)),
+                       decreasing=TRUE)
+df_frequency<- data.frame(word = names(word_frequency),
+                          freq=word_frequency)
 
 
-#export CSV with DOI from data_bib
-#write.csv(data_bib$DI,"exports/test.csv", row.names = FALSE)
-write.csv(data_bib$DI, "exports/DOIs-all.csv", row.names = data_bib$TI)
-social_data_bib <- data_bib[data_bib$Screen2_Social == TRUE, ]
-write.csv(social_data_bib$DI, "exports/DOIs-social.csv", row.names = social_data_bib$TI)
+# simple wordcloud (All the words don't do this)
+# wordcloud(df_frequency$word, df_frequency$freq)
+
+# top 50 words
+wordcloud(df_frequency$word,
+          df_frequency$freq,
+          max.words=50, min.freq = 10)
+
+
+# make it pretty 
+# font and order
+wordcloud(df_frequency$word,
+          df_frequency$freq,
+          max.words=40, min.freq = 10,
+          random.order=FALSE,
+          family = "Arial", font = 3)
+
+# color palatte
+
+library(RColorBrewer)
+
+word_pal <- brewer.pal(10,"Dark2")
+
+wordcloud(df_frequency$word,
+          df_frequency$freq,
+          max.words=40, min.freq = 10,
+          random.order=FALSE,
+          colors=word_pal, font = 3)
+
+
+
+
 
 

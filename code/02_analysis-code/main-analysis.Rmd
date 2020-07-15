@@ -128,6 +128,10 @@ print(Author_location(bib_precip,global_shape,"Precip tagged papers"))
 
 ```{r}
 
+require(bibliometrix)
+
+
+
 # Create keyword co-occurrences network
 NetMatrix <- biblioNetwork(bib_accept, analysis = "co-occurrences", network = "keywords", sep = ";")
 
@@ -141,9 +145,9 @@ library(reshape2)
 
 words <- KeywordGrowth(bib_accept, Tag = "ID", sep = ";", top = 10, cdf = TRUE)
 
-wordsReshaped <- t(words)
+wordsReshaped <- melt(words, id=c("Year"))
 
-#ggplot(words, aes(x = words$Year, y = words$)) + geom_tile()
+ggplot(wordsReshaped, aes(x = Year, y = variable)) + geom_tile(aes(fill = value))
 
 ```
 

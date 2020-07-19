@@ -25,11 +25,19 @@ bib_event     <- bib_all[which(bib_all$Screen2_Event == TRUE),]
 bib_social    <- bib_all[which(bib_all$Screen2_Social == TRUE),]
 bib_hydrology <- bib_all[which(bib_all$Screen2_Model == TRUE),]
 bib_precip    <- bib_all[which(bib_all$Screen2_Precip == TRUE),]
+bib_both      <- bib_all[which(bib_all$Screen2_Social == TRUE & bib_all$Screen2_Model == TRUE),]
 
 ```
 
+# Summary of Screening 
 
+```{r}
 
+summary <- data.frame("total" = nrow(bib_all), "accepted" = nrow(bib_accept), "geophysical" = nrow(bib_hydrology), "social" = nrow(bib_social), "geophysical and social" = nrow(bib_both))
+
+head(summary)
+
+```
 # Plotting maps of locations
 
 This code works for the author countries.  These maps aren't really interesting, but I can use this as a baseline to focus on locations for events and in the abstracts.

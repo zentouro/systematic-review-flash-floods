@@ -156,25 +156,84 @@ ui <- fluidPage(
     sidebarPanel(
       
       #--------------------------------------------------------------------
-      # Token text followed and preceded by a blank line
-      hr(),  
-      tags$header(tags$p("Choose a flood data classification")),
-      hr(),
+      # Not Relevent, we made a mistake
+      fluidRow(
+        materialSwitch(inputId="discardButton", label="Not Relevant",value=FALSE,width="100%",status="danger")),
       
       #--------------------------------------------------------------------
-      # The individual check boxes
-      fluidRow(materialSwitch(inputId="discardButton", label="Not Relevant",value=FALSE,width="100%",status="danger")),
-      fluidRow(materialSwitch(inputId="rainButton", label="Hydrology", value=FALSE,width="100%",status="danger")),
-      hr(),
-      fluidRow(materialSwitch(inputId="modelButton", label="Model/Forecast/Maps", value=FALSE,width="100%",status="danger")),
-      fluidRow(materialSwitch(inputId="socialButton", label="Socio-political or Impact", value=FALSE,width="100%",status="danger")),
-      hr(),
-      fluidRow(materialSwitch(inputId="eventButton", label="Event", value=FALSE, width="100%",status="danger")),
-      hr(),
-      #apologies for the weird double negative here. if it is TRUE, the paper DOES NOT disaggregate by flood type
-      fluidRow(materialSwitch(inputId="floodTypeButton", label="Not Disaggregated", value = FALSE , width="100%", status = "danger" )),
-      hr(),
-      fluidRow(materialSwitch(inputId ="databaseButton", label="Review Database", value=FALSE,width = "100%", status = "danger" )),
+      # Meta-analysis
+      ## TO DO - format this better
+      fluidRow(
+        checkboxGroupInput("metaGroup", 
+                           label = h5("Meta-analysis"), 
+                           choices = list("Climate change" = 1, 
+                                          "Long term impact" = 2, 
+                                          "Land cover" = 3,
+                                          "Policy" = 4),
+                           selected = NULL),
+        #--------------------------------------------------------------------
+        # Assessment Type
+        selectInput("assessmentSelect", 
+                    label = h5("Assessment Type"), 
+                    choices = list("Risk Assessment" = 1, 
+                                   "Vulnerability Assessment" = 2, 
+                                   "Risk Perception" = 3), 
+                    selected = NULL),
+        
+        #--------------------------------------------------------------------
+        # "Directly" before a flood
+        checkboxGroupInput("beforeGroup", 
+                           label = h5("'Directly' before a flood"), 
+                           choices = list("Forecasting (predicting a flood)" = 1, 
+                                          "Early Warning System (letting people know)" = 2, 
+                                          "Anticipatory response" = 3),
+                            selected = NULL),
+        
+        #--------------------------------------------------------------------
+        # During the flood
+        checkboxGroupInput("duringGroup", 
+                           label = h5("'During' a flood"), 
+                           choices = list("Flood detection (is the flood happening right now?)" = 1, 
+                                          "Emergency management (what do the 'experts' do?)" = 2, 
+                                          "Community actions (what did people do?)" = 3),
+                           selected = NULL),
+        #--------------------------------------------------------------------
+        # Impact
+        ## TO DO - ADD multi-select? Fatalities, Economic, Health, Psychological, Community, Infrastructure (e.g. water treatment plants, roads, etc), Other [NOTE?]
+        checkboxGroupInput("impactGroup", 
+                           label = h5("Impact"), 
+                           choices = list("Fatalities" = 1, 
+                                          "Economic" = 2, 
+                                          "Health" = 3,
+                                          "Psychological" = 4,
+                                          "Community" = 5,
+                                          "Infrastructure"= 6,
+                                          "Other [leave a note]" = 7),
+                           selected = NULL),
+        
+        #--------------------------------------------------------------------
+        # Methods
+        ## TO DO - ADD check box? dropdown? Remote sensing/Weather modelling, Machine learning, Mapping/GIS, Simulation/scenarios, Community guidance/tools information, Interviews, Social media/crowd sourcing
+        
+        #--------------------------------------------------------------------
+        # Geography
+        ## TO DO - ADD droppdown? Urban, Rural, Indigenous/"Global South"
+        
+
+        #--------------------------------------------------------------------
+        # Flood Type
+        selectInput("floodSelect", 
+                    label = h5("Select Flood Type"), 
+                    choices = list("Rainfall runoff" = 1, 
+                                    "Cloudburst" = 2, 
+                                    "Dam/levee breach" = 3,
+                                    "Speedy river" = 4,
+                                    "Landslide/Mudslide" = 5,
+                                    "Snowmelt" = 6), 
+                    selected = NULL)),
+      
+      #--------------------------------------------------------------------
+      # Notes
       hr(),
       fluidRow(textInput(inputId = "notesField", label = "Notes", value = "")),
       
@@ -190,10 +249,6 @@ ui <- fluidPage(
     # Additional information for screening
     mainPanel(
       DT::dataTableOutput("table"),
-      hr(),
-      column(3,offset=1,htmlOutput("covidence")),
-      column(3,offset=1,htmlOutput("reject"   )),
-      hr(),
       hr(),
       # More info on screening classifications
       verbatimTextOutput("moreInfo"),
@@ -323,25 +378,7 @@ server <-  function(input,output,session){
   # More info about the screening selections
   hr()
   output$moreInfo <- renderText({
-    paste("Inclusion Criteria Guide",
-          "1. Is the paper relevant to flash flooding or hydrology in general? (If NO - Not Relevant)",
-          "2. If Yes, is the paper about more than the underlying hydrology behind flooding (If NO - Hydrology)",
-          "3. If Yes the paper will likely be included in our analysis. What kind of paper is it?",
-          "         1. Is the paper primarily geophysically focused?", 
-          "            Or socio-politically/impact focused?",  
-          "            (Select appropriate toggle, it can be both)",
-          "         2. Is the paper about an event? (If YES - Event)",
-          "4. Does the paper disaggregate by flood type? (if NO - Not Disaggregated)",
-          "5. Is the paper extremely relevant to our analysis and questions about the impact, vulnerability actions, or response associated with flash floods? (If YES - Review Database)",
-         "\n",
-          "Classification Info", 
-          "Hydrology - Core, underlying process. Not directly related to flash floods.", 
-          "Model - Observing, forecasting, or mapping.", 
-          "Social - How people interact, respond, or communicate.", 
-          "Event - Related to a specific event.",
-          "Review Database - Highly relevent to paper, seminal work on flash flood impact",
-          "Not Relevent - Reject if does not relevent to the above categories.", 
-          "Not disaggregated - doesn't disaggregate by flood type, lumps flash floods and riverine floods together",
+    paste("TK WILL FILL IN LATER",
           sep="\n")
   })
   hr()

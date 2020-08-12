@@ -35,9 +35,12 @@ setwd("~/Documents/GitHub/systematic-review-flash-floods")
 # may need to adjust to your specific machine
 # if you're on a MacOS:
 #setwd("~/Documents/GitHub/systematic-review-flash-floods")
-Workingfile <- "data/screeningData.RData"
+Workingfile <- "data/screeningSocialData.RData"
 load(Workingfile)
 
+data_bib <- bib_social
+
+## TO DO - UPDATE THIS
 #=======================================================================
 # Sort so screened data is at the bottom
 #=======================================================================
@@ -46,6 +49,7 @@ data_bib$Reject[which(is.na(data_bib$Reject)==TRUE)] <- FALSE
 data_bib$Screen2_Assessed[which(is.na(data_bib$Screen2_Assessed)==TRUE)] <- FALSE
 data_bib <- data_bib[with(data_bib, order(Screen2_Assessed,Reject,Screen1_Assessed)), ]
 
+## Do we want to change any of the highlighting rules? 
 #=======================================================================
 # Highlighting Rules
 #=======================================================================
@@ -199,7 +203,6 @@ ui <- fluidPage(
                            selected = NULL),
         #--------------------------------------------------------------------
         # Impact
-        ## TO DO - ADD multi-select? Fatalities, Economic, Health, Psychological, Community, Infrastructure (e.g. water treatment plants, roads, etc), Other [NOTE?]
         checkboxGroupInput("impactGroup", 
                            label = h5("Impact"), 
                            choices = list("Fatalities" = 1, 
@@ -213,12 +216,25 @@ ui <- fluidPage(
         
         #--------------------------------------------------------------------
         # Methods
-        ## TO DO - ADD check box? dropdown? Remote sensing/Weather modelling, Machine learning, Mapping/GIS, Simulation/scenarios, Community guidance/tools information, Interviews, Social media/crowd sourcing
+        checkboxGroupInput("methodsGroup", 
+                           label = h5("Methods"), 
+                           choices = list("Remote sensing & weather modelling" = 1, 
+                                          "Machine learning" = 2, 
+                                          "Mapping & GIS" = 3,
+                                          "Simulations or scenarios" = 4,
+                                          "Community guidance & tools" = 5,
+                                          "Interviews"= 6,
+                                          "Social media or crowd sourcing" = 7),
+                           selected = NULL),
         
         #--------------------------------------------------------------------
         # Geography
-        ## TO DO - ADD droppdown? Urban, Rural, Indigenous/"Global South"
-        
+        selectInput("geoSelect", 
+                    label = h5("Geography"), 
+                    choices = list("Urban" = 1, 
+                                   "Rural" = 2, 
+                                   "Indigenous/'Global South'" = 3), 
+                    selected = NULL),        
 
         #--------------------------------------------------------------------
         # Flood Type
@@ -271,29 +287,32 @@ server <-  function(input,output,session){
   # Create a "reactive value" which allows us to play with the output of a button click
   values <- reactiveValues(); values$count <- 0
 
-
   #--------------------------------------------------------------------
   # At the same time on a next click (bloody shiny), 
   # select the row you care about and highlight it
+  
+  # TO DO: Getting Error - unused argument (value = FALSE)
   highlighter <- eventReactive(
-    {input$nextButton 
-      },
+    {input$nextButton},
     {
       updateMaterialSwitch(session=session, inputId="discardButton",value=FALSE)
-      updateMaterialSwitch(session=session, inputId="rainButton",value=FALSE)
-      updateMaterialSwitch(session=session, inputId="modelButton",value=FALSE)
-      updateMaterialSwitch(session=session, inputId="socialButton",value=FALSE)
-      updateMaterialSwitch(session=session, inputId="eventButton",value=FALSE)
-      updateMaterialSwitch(session=session, inputId="databaseButton",value=FALSE)
-      updateMaterialSwitch(session=session, inputId="floodTypeButton",value=FALSE)
+      updateCheckboxGroupInput(session=session, inputId="metaGroup", selected = NULL)
+      updateSelectInput(session=session, inputId="assessmentSelect", selected = NULL)
+      updateCheckboxGroupInput(session=session, inputId="beforeGroup", selected = NULL)
+      updateCheckboxGroupInput(session=session, inputId="duringGroup", selected = NULL)
+      updateCheckboxGroupInput(session=session, inputId="impactGroup", selected = NULL)
+      updateCheckboxGroupInput(session=session, inputId="methodsGroup", selected = NULL)
+      updateSelectInput(session=session, inputId="geoSelect", selected = NULL)
+      updateSelectInput(session=session, inputId="floodSelect", selected = NULL)
       updateTextInput(session=session, inputId="notesField", value = "")
+      
 ######## SWITCHED OFF      save(list="data_bib",file=Workingfile)
 
       
       #-----------------------------------------------------
       # If the row number is not at the end, increment up
       # THIS IS *REALLY BAD CODING*, ADDED IN BECAUSE IT WANTS TO RECALCULATE THE VALUE.
-     # if(sum(c(input$discardButton,input$rainButton,input$modelButton,input$socialButton))>0){
+      # if(sum(c(input$discardButton,input$rainButton,input$modelButton,input$socialButton))>0){
         if(values$count != nrow(data_bib)){
           #-----------------------------------------------------
           # move to the next row
@@ -306,15 +325,17 @@ server <-  function(input,output,session){
            
            #-----------------------------------------------------
            # Output to data_bib         
-           data_bib$Screen2_Assessed[values$count-1] <<- TRUE
-           data_bib$Screen2_Reject  [values$count-1] <<- input$discardButton
-           data_bib$Screen2_Event   [values$count-1] <<- input$eventButton
-           data_bib$Screen2_Model   [values$count-1] <<- input$modelButton
-           data_bib$Screen2_Precip  [values$count-1] <<- input$rainButton
-           data_bib$Screen2_Social  [values$count-1] <<- input$socialButton
-           data_bib$Screen2_Notes   [values$count-1] <<- input$notesField
-           data_bib$Screen2_FlashFloodDatabase[values$count-1] <<- input$databaseButton
-           data_bib$Screen2_typeID  [values$count-1] <<- input$floodTypeButton
+           data_bib$Screen3_Assessed  [values$count-1] <<- TRUE
+           data_bib$Screen3_Reject    [values$count-1] <<- input$discardButton
+           data_bib$Screen3_meta      [values$count-1] <<- input$metaGroup
+           data_bib$Screen3_assessment[values$count-1] <<- input$assessmentSelect
+           data_bib$Screen3_before    [values$count-1] <<- input$beforeGroup
+           data_bib$Screen3_during    [values$count-1] <<- input$duringGroup
+           data_bib$Screen3_impact    [values$count-1] <<- input$impactGroup
+           data_bib$Screen3_methods   [values$count-1] <<- input$methodsGroup
+           data_bib$Screen3_geo       [values$count-1] <<- input$geoSelect
+           data_bib$Screen3_flood     [values$count-1] <<- input$floodSelect
+           data_bib$Screen3_Notes     [values$count-1] <<- input$notesField
            return(YourData2)
         }
         #-----------------------------------------------------
@@ -325,47 +346,20 @@ server <-  function(input,output,session){
           
           #-----------------------------------------------------
           # Output to data_bib         
-          data_bib$Screen2_Assessed[nrow(data_bib)] <<- TRUE
-          data_bib$Screen2_Reject  [nrow(data_bib)] <<- input$discardButton
-          data_bib$Screen2_Event   [nrow(data_bib)] <<- input$eventButton
-          data_bib$Screen2_Model   [nrow(data_bib)] <<- input$modelButton
-          data_bib$Screen2_Precip  [nrow(data_bib)] <<- input$rainButton
-          data_bib$Screen2_Social  [nrow(data_bib)] <<- input$socialButton
-          data_bib$Screen2_Notes   [nrow(data_bib)] <<- input$notesField
-          data_bib$Screen2_FlashFloodDatabase [nrow(data_bib)] <<- input$databaseButton
-          data_bib$Screen2_typeID  [nrow(data_bib)] <<- input$floodTypeButton
+          data_bib$Screen3_Assessed   [nrow(data_bib)] <<- TRUE
+          data_bib$Screen3_Reject     [nrow(data_bib)] <<- input$discardButton
+          data_bib$Screen3_meta       [nrow(data_bib)] <<- input$metaGroup
+          data_bib$Screen3_assessment [nrow(data_bib)] <<- input$assessmentSelect
+          data_bib$Screen3_before     [nrow(data_bib)] <<- input$beforeGroup
+          data_bib$Screen3_during     [nrow(data_bib)] <<- input$duringGroup
+          data_bib$Screen3_impact     [nrow(data_bib)] <<- input$impactGroup
+          data_bib$Screen3_methods    [nrow(data_bib)] <<- input$methodsGroup
+          data_bib$Screen3_geo        [nrow(data_bib)] <<- input$geoSelect
+          data_bib$Screen3_flood      [nrow(data_bib)] <<- input$floodSelect
+          data_bib$Screen3_Notes      [nrow(data_bib)] <<- input$notesField
           return(YourData2)
         }
     })  
-  
-  #--------------------------------------------------------------------
-  # Highlight whether it has been screened or not in covidence
-  highlightCovidence <- reactive({
-    YourText2 = as.character(data_bib$Screen1_Assessed[values$count])
-    if(YourText2=="FALSE"){
-      YourText3 <- "Covidence: NO"
-      YourText3 %<>% str_replace_all(regex("Covidence: NO",ignore_case = TRUE), wordHighlightgrey)
-    }else{
-      YourText3 <- "Covidence: YES"
-      YourText3 %<>% str_replace_all(regex("Covidence: YES",ignore_case = TRUE), wordHighlightgreen)
-    }
-    return(YourText3)
-  })   
-  
-  #--------------------------------------------------------------------
-  # Highlight whether it has been rejected
-  highlightExclude <- reactive({
-    YourText2 = as.character(data_bib$Reject[values$count])
-    if(YourText2=="FALSE"){
-      YourText3 <- "Reject: NO"
-      YourText3 %<>% str_replace_all(regex("Reject: NO",ignore_case = TRUE), wordHighlightgrey)
-    }else{
-      YourText3 <- as.character(data_bib$Reject[values$count])#"Reject: YES"
-      YourText3 %<>% str_replace_all(regex("Reject: YES",ignore_case = TRUE), wordHighlightred)
-    }
-    return(YourText3)
-  }) 
-
   
   #--------------------------------------------------------------------
   # Output the table to the GUI
@@ -383,7 +377,7 @@ server <-  function(input,output,session){
   })
   hr()
   output$count <- renderUI({ HTML(paste("You have reviewed", (values$count - 2) ,"papers in this session")) })
-  output$total <- renderUI({HTML(paste("In total, we have reviewed", (sum(data_bib$Screen2_Assessed, na.rm = TRUE)), "of", (length(data_bib$Screen2_Assessed))))})
+  output$total <- renderUI({HTML(paste("In total, we have reviewed", (sum(data_bib$Screen3_Assessed, na.rm = TRUE)), "of", (length(data_bib$Screen3_Assessed))))})
 }
 
 #=======================================================================

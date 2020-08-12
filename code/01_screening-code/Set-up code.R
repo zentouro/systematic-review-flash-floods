@@ -95,3 +95,28 @@ test <- data_bib[1:10,]
 save(data_bib, file = "data/screeningData-updated.rData")
 
 
+#-----------------------------------------------------------------------------------
+# Now set up the screen 3 columns
+#     screening the social code 
+#-----------------------------------------------------------------------------------
+setwd("~/Documents/GitHub/systematic-review-flash-floods")
+Workingfile <- "data/screeningData.RData"
+load(Workingfile)
+
+bib_all       <- data_bib; rm(data_bib)
+bib_social    <- bib_all[which(bib_all$Screen2_Social == TRUE),]
+
+bib_social$Screen3_Assessed <- NA
+bib_social$Screen3_Reject   <- NA
+
+bib_social$Screen3_meta       <- ""     
+bib_social$Screen3_assessment <- ""
+bib_social$Screen3_before     <- ""   
+bib_social$Screen3_during     <- ""
+bib_social$Screen3_impact     <- ""
+bib_social$Screen3_methods    <- ""
+bib_social$Screen3_geo        <- ""
+bib_social$Screen3_flood      <- ""
+bib_social$Screen3_Notes      <- ""
+
+save(bib_social, file = "data/screeningSocialData.rData")

@@ -29,25 +29,24 @@ library(rmdformats)
 
 rm(list=ls())
 # adjust this to the appropriate folder on your system
-setwd("~/Documents/GitHub/systematic-review-flash-floods")
+# setwd("~/Documents/GitHub/systematic-review-flash-floods")
 # if you're on a Windows PC try: 
 # setwd("C:\\Documents\\GitHub\\systematic-review-flash-floods"")
 # may need to adjust to your specific machine
 # if you're on a MacOS:
 #setwd("~/Documents/GitHub/systematic-review-flash-floods")
-Workingfile <- "data/screeningSocialData.RData"
+Workingfile <- "~/Documents/GitHub/systematic-review-flash-floods/data/screeningSocialData.RData"
 load(Workingfile)
 
-data_bib <- bib_social
-
-## TO DO - UPDATE THIS
 #=======================================================================
 # Sort so screened data is at the bottom
 #=======================================================================
-data_bib$Screen1_Assessed[which(is.na(data_bib$Screen1_Assessed)==TRUE)] <- FALSE
+data_bib$Screen1_Assessed[which(is.na(data_bib$Screen1_Assessed)==TRUE)] <- FALSE   # extra check to make sure no NAs - everything is either true or false
 data_bib$Reject[which(is.na(data_bib$Reject)==TRUE)] <- FALSE
 data_bib$Screen2_Assessed[which(is.na(data_bib$Screen2_Assessed)==TRUE)] <- FALSE
-data_bib <- data_bib[with(data_bib, order(Screen2_Assessed,Reject,Screen1_Assessed)), ]
+data_bib$Screen3_Assessed[which(is.na(data_bib$Screen3_Assessed)==TRUE)] <- FALSE
+
+data_bib <- data_bib[with(data_bib, order(Screen3_Assessed)), ]
 
 ## Do we want to change any of the highlighting rules? 
 #=======================================================================
@@ -170,6 +169,7 @@ ui <- fluidPage(
       fluidRow(
         checkboxGroupInput("metaGroup", 
                            label = h5("Meta-analysis"), 
+                           inline = TRUE,
                            choices = list("Climate change" = 1, 
                                           "Long term impact" = 2, 
                                           "Land cover" = 3,
@@ -182,7 +182,7 @@ ui <- fluidPage(
                     choices = list("Risk Assessment" = 1, 
                                    "Vulnerability Assessment" = 2, 
                                    "Risk Perception" = 3), 
-                    selected = NULL),
+                    selected = FALSE),
         
         #--------------------------------------------------------------------
         # "Directly" before a flood
@@ -191,7 +191,7 @@ ui <- fluidPage(
                            choices = list("Forecasting (predicting a flood)" = 1, 
                                           "Early Warning System (letting people know)" = 2, 
                                           "Anticipatory response" = 3),
-                            selected = NULL),
+                            selected = FALSE),
         
         #--------------------------------------------------------------------
         # During the flood
@@ -200,7 +200,7 @@ ui <- fluidPage(
                            choices = list("Flood detection (is the flood happening right now?)" = 1, 
                                           "Emergency management (what do the 'experts' do?)" = 2, 
                                           "Community actions (what did people do?)" = 3),
-                           selected = NULL),
+                           selected = FALSE),
         #--------------------------------------------------------------------
         # Impact
         checkboxGroupInput("impactGroup", 
@@ -212,7 +212,7 @@ ui <- fluidPage(
                                           "Community" = 5,
                                           "Infrastructure"= 6,
                                           "Other [leave a note]" = 7),
-                           selected = NULL),
+                           selected = FALSE),
         
         #--------------------------------------------------------------------
         # Methods
@@ -225,7 +225,7 @@ ui <- fluidPage(
                                           "Community guidance & tools" = 5,
                                           "Interviews"= 6,
                                           "Social media or crowd sourcing" = 7),
-                           selected = NULL),
+                           selected = FALSE),
         
         #--------------------------------------------------------------------
         # Geography
@@ -234,7 +234,7 @@ ui <- fluidPage(
                     choices = list("Urban" = 1, 
                                    "Rural" = 2, 
                                    "Indigenous/'Global South'" = 3), 
-                    selected = NULL),        
+                    selected = FALSE),        
 
         #--------------------------------------------------------------------
         # Flood Type
@@ -246,7 +246,7 @@ ui <- fluidPage(
                                     "Speedy river" = 4,
                                     "Landslide/Mudslide" = 5,
                                     "Snowmelt" = 6), 
-                    selected = NULL)),
+                    selected = FALSE)),
       
       #--------------------------------------------------------------------
       # Notes
@@ -296,23 +296,23 @@ server <-  function(input,output,session){
     {input$nextButton},
     {
       updateMaterialSwitch(session=session, inputId="discardButton",value=FALSE)
-      updateCheckboxGroupInput(session=session, inputId="metaGroup", selected = NULL)
-      updateSelectInput(session=session, inputId="assessmentSelect", selected = NULL)
-      updateCheckboxGroupInput(session=session, inputId="beforeGroup", selected = NULL)
-      updateCheckboxGroupInput(session=session, inputId="duringGroup", selected = NULL)
-      updateCheckboxGroupInput(session=session, inputId="impactGroup", selected = NULL)
-      updateCheckboxGroupInput(session=session, inputId="methodsGroup", selected = NULL)
-      updateSelectInput(session=session, inputId="geoSelect", selected = NULL)
-      updateSelectInput(session=session, inputId="floodSelect", selected = NULL)
+      updateCheckboxGroupInput(session=session, inputId="metaGroup", selected = FALSE)
+      updateSelectInput(session=session, inputId="assessmentSelect", selected = FALSE)
+      updateCheckboxGroupInput(session=session, inputId="beforeGroup", selected = FALSE)
+      updateCheckboxGroupInput(session=session, inputId="duringGroup", selected = FALSE)
+      updateCheckboxGroupInput(session=session, inputId="impactGroup", selected = FALSE)
+      updateCheckboxGroupInput(session=session, inputId="methodsGroup", selected = FALSE)
+      updateSelectInput(session=session, inputId="geoSelect", selected = FALSE)
+      updateSelectInput(session=session, inputId="floodSelect", selected = FALSE)
       updateTextInput(session=session, inputId="notesField", value = "")
       
-######## SWITCHED OFF      save(list="data_bib",file=Workingfile)
+      save(list="data_bib",file=Workingfile)
 
       
       #-----------------------------------------------------
       # If the row number is not at the end, increment up
       # THIS IS *REALLY BAD CODING*, ADDED IN BECAUSE IT WANTS TO RECALCULATE THE VALUE.
-      # if(sum(c(input$discardButton,input$rainButton,input$modelButton,input$socialButton))>0){
+      # if(sum(c(input$discardButton,input$rainButton,input$modelButton, input$socialButton))>0){
         if(values$count != nrow(data_bib)){
           #-----------------------------------------------------
           # move to the next row
@@ -327,14 +327,21 @@ server <-  function(input,output,session){
            # Output to data_bib         
            data_bib$Screen3_Assessed  [values$count-1] <<- TRUE
            data_bib$Screen3_Reject    [values$count-1] <<- input$discardButton
-           data_bib$Screen3_meta      [values$count-1] <<- input$metaGroup
-           data_bib$Screen3_assessment[values$count-1] <<- input$assessmentSelect
-           data_bib$Screen3_before    [values$count-1] <<- input$beforeGroup
-           data_bib$Screen3_during    [values$count-1] <<- input$duringGroup
-           data_bib$Screen3_impact    [values$count-1] <<- input$impactGroup
-           data_bib$Screen3_methods   [values$count-1] <<- input$methodsGroup
-           data_bib$Screen3_geo       [values$count-1] <<- input$geoSelect
-           data_bib$Screen3_flood     [values$count-1] <<- input$floodSelect
+           
+           if(length(input$metaGroup)<=0){
+              data_bib$Screen3_meta[values$count-1] <<- 0
+           }else{
+              data_bib$Screen3_meta      [values$count-1] <<- input$metaGroup
+           }
+           ## TO DO add if/else 
+           
+           # data_bib$Screen3_assessment[values$count-1] <<- input$assessmentSelect
+           # data_bib$Screen3_before    [values$count-1] <<- input$beforeGroup
+           # data_bib$Screen3_during    [values$count-1] <<- input$duringGroup
+           # data_bib$Screen3_impact    [values$count-1] <<- input$impactGroup
+           # data_bib$Screen3_methods   [values$count-1] <<- input$methodsGroup
+           # data_bib$Screen3_geo       [values$count-1] <<- input$geoSelect
+           # data_bib$Screen3_flood     [values$count-1] <<- input$floodSelect
            data_bib$Screen3_Notes     [values$count-1] <<- input$notesField
            return(YourData2)
         }

@@ -139,14 +139,25 @@ helenhighlight <- function(YourData){
 # GUI function
 #=======================================================================
 ui <- fluidPage(
+  tags$head(tags$style(
+    HTML('
+         #sidebar {
+            background-color: #5c5c5f;
+         }
+         
+         #table {
+            background-color: #5c5c5f;
+         }
+        '))),
   #--------------------------------------------------------------------
   # Feel free to change the theme to serve your preferences, you'll be staring at this for a while
   # so might as well make it look good.
-  theme = shinytheme("cosmo"),
+  #theme = shinytheme("flatly"),
+  theme = 'bootstrap.css',
   #--------------------------------------------------------------------
   # This creates a shiny sidebar.  There are other options
   sidebarLayout(
-    sidebarPanel(
+    sidebarPanel(id = "sidebar",
       
       #--------------------------------------------------------------------
       # Not Relevent, we made a mistake
@@ -157,39 +168,45 @@ ui <- fluidPage(
       # Meta-analysis
       ## TO DO - format this better
       fluidRow(
-        checkboxGroupInput("metaGroup", 
+        checkboxGroupButtons(inputId = "metaGroup", 
                            label = h5("Meta-analysis"), 
-                           inline = TRUE,
                            choices = list("Climate change" = 1, 
                                           "Long term impact" = 2, 
                                           "Land cover" = 3,
                                           "Policy" = 4),
-                           selected = NULL),
+                           #justified = TRUE, 
+                           status = "info",
+                           selected = NULL)),
         #--------------------------------------------------------------------
         # Assessment Type
+      fluidRow(
         selectInput("assessmentSelect", 
                     label = h5("Assessment Type"), 
                     choices = list("Risk Assessment" = 1, 
                                    "Vulnerability Assessment" = 2, 
                                    "Risk Perception" = 3), 
-                    selected = NULL),
+                    selected = NULL)),
         
         #--------------------------------------------------------------------
         # "Directly" before a flood
-        checkboxGroupInput("beforeGroup", 
+      fluidRow(
+        checkboxGroupButtons("beforeGroup", 
                            label = h5("'Directly' before a flood"), 
-                           choices = list("Forecasting (predicting a flood)" = 1, 
-                                          "Early Warning System (letting people know)" = 2, 
+                           choices = list("Forecasting" = 1, 
+                                          "Early Warning System" = 2, 
                                           "Anticipatory response" = 3),
-                            selected = NULL),
+                           status = "info",
+                           selected = NULL)),
         
         #--------------------------------------------------------------------
         # During the flood
-        checkboxGroupInput("duringGroup", 
+      fluidRow(
+        checkboxGroupButtons("duringGroup", 
                            label = h5("'During' a flood"), 
-                           choices = list("Flood detection (is the flood happening right now?)" = 1, 
-                                          "Emergency management (what do the 'experts' do?)" = 2, 
-                                          "Community actions (what did people do?)" = 3),
+                           choices = list("Flood detection" = 1, 
+                                          "Emergency management" = 2, 
+                                          "Community actions" = 3),
+                           status = "info",
                            selected = NULL),
         #--------------------------------------------------------------------
         # Impact
@@ -215,12 +232,13 @@ ui <- fluidPage(
                                           "Community guidance & tools" = 5,
                                           "Interviews"= 6,
                                           "Social media or crowd sourcing" = 7),
-                           selected = NULL),
+                           selected = NULL)),
         
         #--------------------------------------------------------------------
         # Geography
-        selectInput("geoSelect", 
-                    label = h5("Geography"), 
+        fluidRow(
+          selectInput("geoSelect", 
+                    label = h5("Geography........| "), 
                     choices = list("Urban" = 1, 
                                    "Rural" = 2, 
                                    "Indigenous/'Global South'" = 3), 
@@ -246,7 +264,8 @@ ui <- fluidPage(
       #--------------------------------------------------------------------
       # The next button
       hr(),
-      fluidRow(actionButton("nextButton", "Next"))
+      fluidRow(actionButton("nextButton", "Next", width = "100px", 
+                            style="color: #fff; background-color: #4bbf73; border-color: #2e6da4"))
     ),
     
     #--------------------------------------------------------------------

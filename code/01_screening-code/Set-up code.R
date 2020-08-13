@@ -104,7 +104,7 @@ Workingfile <- "data/screeningData.RData"
 load(Workingfile)
 
 bib_all       <- data_bib; rm(data_bib)
-data_bib    <- bib_all[which(bib_all$Screen2_Social == TRUE),]
+data_bib      <- bib_all[which(bib_all$Screen2_Social == TRUE),]
 
 data_bib$Screen3_Assessed <- NA
 data_bib$Screen3_Reject   <- NA

@@ -6,10 +6,6 @@ library(bib2df)  ;  library(knitr)
 library(shinythemes)
 library(rmdformats)
 
-#=======================================================================
-# THIS IS THE SOCIAL REVIEW CODE.  IT IS SET TO NOT SAVE ANY DATA TO FILE
-# WHILE WE BUILD IT.
-#=======================================================================
 
 
 # THIS CODE OVERWRITES YOUR INPUT DATA. MAKE A COPY BEFORE YOU START 
@@ -29,12 +25,6 @@ library(rmdformats)
 
 rm(list=ls())
 # adjust this to the appropriate folder on your system
-# setwd("~/Documents/GitHub/systematic-review-flash-floods")
-# if you're on a Windows PC try: 
-# setwd("C:\\Documents\\GitHub\\systematic-review-flash-floods"")
-# may need to adjust to your specific machine
-# if you're on a MacOS:
-#setwd("~/Documents/GitHub/systematic-review-flash-floods")
 Workingfile <- "~/Documents/GitHub/systematic-review-flash-floods/data/screeningSocialData.RData"
 load(Workingfile)
 
@@ -182,7 +172,7 @@ ui <- fluidPage(
                     choices = list("Risk Assessment" = 1, 
                                    "Vulnerability Assessment" = 2, 
                                    "Risk Perception" = 3), 
-                    selected = FALSE),
+                    selected = NULL),
         
         #--------------------------------------------------------------------
         # "Directly" before a flood
@@ -191,7 +181,7 @@ ui <- fluidPage(
                            choices = list("Forecasting (predicting a flood)" = 1, 
                                           "Early Warning System (letting people know)" = 2, 
                                           "Anticipatory response" = 3),
-                            selected = FALSE),
+                            selected = NULL),
         
         #--------------------------------------------------------------------
         # During the flood
@@ -200,7 +190,7 @@ ui <- fluidPage(
                            choices = list("Flood detection (is the flood happening right now?)" = 1, 
                                           "Emergency management (what do the 'experts' do?)" = 2, 
                                           "Community actions (what did people do?)" = 3),
-                           selected = FALSE),
+                           selected = NULL),
         #--------------------------------------------------------------------
         # Impact
         checkboxGroupInput("impactGroup", 
@@ -212,7 +202,7 @@ ui <- fluidPage(
                                           "Community" = 5,
                                           "Infrastructure"= 6,
                                           "Other [leave a note]" = 7),
-                           selected = FALSE),
+                           selected = NULL),
         
         #--------------------------------------------------------------------
         # Methods
@@ -225,7 +215,7 @@ ui <- fluidPage(
                                           "Community guidance & tools" = 5,
                                           "Interviews"= 6,
                                           "Social media or crowd sourcing" = 7),
-                           selected = FALSE),
+                           selected = NULL),
         
         #--------------------------------------------------------------------
         # Geography
@@ -234,7 +224,7 @@ ui <- fluidPage(
                     choices = list("Urban" = 1, 
                                    "Rural" = 2, 
                                    "Indigenous/'Global South'" = 3), 
-                    selected = FALSE),        
+                    selected = NULL),        
 
         #--------------------------------------------------------------------
         # Flood Type
@@ -246,7 +236,7 @@ ui <- fluidPage(
                                     "Speedy river" = 4,
                                     "Landslide/Mudslide" = 5,
                                     "Snowmelt" = 6), 
-                    selected = FALSE)),
+                    selected = NULL)),
       
       #--------------------------------------------------------------------
       # Notes
@@ -325,24 +315,58 @@ server <-  function(input,output,session){
            
            #-----------------------------------------------------
            # Output to data_bib         
-           data_bib$Screen3_Assessed  [values$count-1] <<- TRUE
-           data_bib$Screen3_Reject    [values$count-1] <<- input$discardButton
+           data_bib$Screen3_Assessed    [values$count-1] <<- TRUE
+           data_bib$Screen3_Reject      [values$count-1] <<- input$discardButton
            
-           if(length(input$metaGroup)<=0){
-              data_bib$Screen3_meta[values$count-1] <<- 0
-           }else{
-              data_bib$Screen3_meta      [values$count-1] <<- input$metaGroup
+           if(length(input$metaGroup) <= 0){
+              data_bib$Screen3_meta     [values$count-1] <<- 0
+           } else{
+              data_bib$Screen3_meta     [values$count-1] <<- input$metaGroup
            }
-           ## TO DO add if/else 
            
-           # data_bib$Screen3_assessment[values$count-1] <<- input$assessmentSelect
-           # data_bib$Screen3_before    [values$count-1] <<- input$beforeGroup
-           # data_bib$Screen3_during    [values$count-1] <<- input$duringGroup
-           # data_bib$Screen3_impact    [values$count-1] <<- input$impactGroup
-           # data_bib$Screen3_methods   [values$count-1] <<- input$methodsGroup
-           # data_bib$Screen3_geo       [values$count-1] <<- input$geoSelect
-           # data_bib$Screen3_flood     [values$count-1] <<- input$floodSelect
-           data_bib$Screen3_Notes     [values$count-1] <<- input$notesField
+           if(length(input$assessmentSelect) <= 0){
+             data_bib$Screen3_assessment[values$count-1] <<- 0
+           } else{
+             data_bib$Screen3_assessment[values$count-1] <<- input$assessmentSelect
+           }
+           
+           if(length(input$beforeGroup) <= 0){
+             data_bib$Screen3_before    [values$count-1] <<- 0
+           } else {
+             data_bib$Screen3_before    [values$count-1] <<- input$beforeGroup
+           }
+           
+           if(length(input$duringGroup) <= 0){
+             data_bib$Screen3_during    [values$count-1] <<- 0
+           } else {
+             data_bib$Screen3_during    [values$count-1] <<- input$duringGroup
+           }
+           
+           if(length(input$impactGroup) <= 0){
+             data_bib$Screen3_impact    [values$count-1] <<- 0
+           } else {
+             data_bib$Screen3_impact    [values$count-1] <<- input$impactGroup
+           }
+        
+           if(length(input$methodsGroup) <= 0){
+             data_bib$Screen3_methods   [values$count-1] <<- 0
+           } else {
+             data_bib$Screen3_methods   [values$count-1] <<- input$methodsGroup
+           }
+           
+           if(length(input$geoSelect) <= 0){
+             data_bib$Screen3_geo       [values$count-1] <<- 0
+           } else {
+             data_bib$Screen3_geo       [values$count-1] <<- input$geoSelect
+           }
+           
+           if(length(input$floodSelect) <= 0){
+             data_bib$Screen3_flood     [values$count-1] <<- 0
+           } else {
+             data_bib$Screen3_flood     [values$count-1] <<- input$floodSelect
+           }
+           
+           data_bib$Screen3_Notes       [values$count-1] <<- input$notesField
            return(YourData2)
         }
         #-----------------------------------------------------

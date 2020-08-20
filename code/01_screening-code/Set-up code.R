@@ -165,19 +165,29 @@ save(data_bib, file = "data/screeningSocialData.rData")
 
 
 
-search_climate <- grep(toupper("climate change"),toupper(data_bib$TI))
-search_vulnerability <- grep(toupper("vulnerability") ,toupper(data_bib$TI))
-data_bib$TEST <- NA
-# This finds the titles with "climate change" OR "vulnerability" then puts "OR" into those rows of the TEST column
-# You are playing with the same output column so it will overwrite.
-data_bib$TEST [unique(c(search_climate,search_vulnerability))] <- "OR"
-# This finds the titles with "climate change" AND "vulnerability" then puts "AND" into those rows of the TEST column
-data_bib$TEST [intersect(search_climate,search_vulnerability)]  <- "AND" ### AND
-# But maybe you want both tags in your output file, so this will do both separated by ;
-data_bib$TEST2 <- NA
-# This finds the titles with "climate change" AND "vulnerability" then puts "AND" into those rows of the TEST column
-data_bib$TEST2 [intersect(search_climate,search_vulnerability)]  <- "AND" ### AND
-data_bib$TEST2 [unique(c(search_climate,search_vulnerability))] <-
-  paste(data_bib$TEST2[unique(c(search_climate,search_vulnerability))],"OR",sep=";")
-#print out the results
-data_bib[,c("TI","TEST","TEST2")]
+
+
+
+
+
+
+
+
+
+######################### SAMPLE 
+# search_climate <- grep(toupper("climate change"),toupper(data_bib$TI))
+# search_vulnerability <- grep(toupper("vulnerability") ,toupper(data_bib$TI))
+# data_bib$TEST <- NA
+# # This finds the titles with "climate change" OR "vulnerability" then puts "OR" into those rows of the TEST column
+# # You are playing with the same output column so it will overwrite.
+# data_bib$TEST [unique(c(search_climate,search_vulnerability))] <- "OR"
+# # This finds the titles with "climate change" AND "vulnerability" then puts "AND" into those rows of the TEST column
+# data_bib$TEST [intersect(search_climate,search_vulnerability)]  <- "AND" ### AND
+# # But maybe you want both tags in your output file, so this will do both separated by ;
+# data_bib$TEST2 <- NA
+# # This finds the titles with "climate change" AND "vulnerability" then puts "AND" into those rows of the TEST column
+# data_bib$TEST2 [intersect(search_climate,search_vulnerability)]  <- "AND" ### AND
+# data_bib$TEST2 [unique(c(search_climate,search_vulnerability))] <-
+#   paste(data_bib$TEST2[unique(c(search_climate,search_vulnerability))],"OR",sep=";")
+# #print out the results
+# data_bib[,c("TI","TEST","TEST2")]

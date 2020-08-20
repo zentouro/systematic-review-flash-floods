@@ -170,13 +170,17 @@ ui <- fluidPage(
       fluidRow(
         checkboxGroupButtons(inputId = "metaGroup", 
                            label = h5("Meta-analysis"), 
-                           choices = list("Climate change" = 1, 
-                                          "Long term impact" = 2, 
-                                          "Land cover" = 3,
-                                          "Policy" = 4),
-                           #justified = TRUE, 
+                           choices = c("Climate change" = 1, 
+                                       "Long term impact" = 2, 
+                                       "Land cover" = 3,
+                                       "Policy" = 4),
+                           checkIcon = list(
+                             yes = tags$i(class = "fa fa-circle", 
+                                          style = "color: steelblue"),
+                             no = tags$i(class = "fa fa-circle-o", 
+                                         style = "color: steelblue")),
                            status = "info",
-                           selected = NULL)),
+                           selected = 3)),
         #--------------------------------------------------------------------
         # Assessment Type
       fluidRow(
@@ -300,20 +304,26 @@ server <-  function(input,output,session){
   # At the same time on a next click (bloody shiny), 
   # select the row you care about and highlight it
   
-  # TO DO: Getting Error - unused argument (value = FALSE)
-  highlighter <- eventReactive(
-    {input$nextButton},
+  highlighter <- eventReactive( 
+    # not sure if the problems with the update button have to do with eventReactive, but most of my googling for the error
+    # lead me to conversations about ignoreNull and ignoreInit
+    {input$nextButton}, #ignoreNULL = FALSE, ignoreInit = FALSE,
     {
       updateMaterialSwitch(session=session, inputId="discardButton",value=FALSE)
-      #metaGroup isn't working
-      updateCheckboxGroupInput(session=session, inputId="metaGroup", selected = as.numeric(data_bib$Screen3_meta)[values$count+1])
-      updateSelectInput(session=session, inputId="assessmentSelect", selected = as.numeric(data_bib$Screen3_assessment)[values$count+1])
-      updateCheckboxGroupInput(session=session, inputId="beforeGroup", selected = FALSE)
-      updateCheckboxGroupInput(session=session, inputId="duringGroup", selected = FALSE)
-      updateCheckboxGroupInput(session=session, inputId="impactGroup", selected = as.numeric(data_bib$Screen3_impact)[values$count+1])
-      updateCheckboxGroupInput(session=session, inputId="methodsGroup", selected = FALSE)
-      updateSelectInput(session=session, inputId="geoSelect", selected = as.numeric(data_bib$Screen3_geo)[values$count+1])
-      updateSelectInput(session=session, inputId="floodSelect", selected = as.numeric(data_bib$Screen3_flood)[values$count+1])
+      # metaGroup isn't working
+      # when I use the 'correct' update button, it breaks all the other buttons 
+      # can't even get it to manually update to select the 2nd button, even though manuall selection on first instance  works
+      updateCheckboxGroupButtons(session=session, inputId="metaGroup", 
+                                 selected = NULL) #as.numeric(data_bib$Screen3_meta)[values$count+1])
+      updateSelectInput(session=session, inputId="assessmentSelect", 
+                        selected = as.numeric(data_bib$Screen3_assessment)[values$count+1])
+      updateCheckboxGroupInput(session=session, inputId="beforeGroup", selected = NULL)
+      updateCheckboxGroupInput(session=session, inputId="duringGroup", selected = NULL)
+      # when I turn impactGroup on, it breaks geoSelect and floodSelect updating? 
+      updateCheckboxGroupInput(session=session, inputId="impactGroup", selected = NULL) #as.numeric(data_bib$Screen3_impact)[values$count+1])
+      updateCheckboxGroupInput(session=session, inputId="methodsGroup", selected = NULL)
+      updateSelectInput(session=session, inputId="geoSelect", selected = NULL) #as.numeric(data_bib$Screen3_geo)[values$count+1])
+      updateSelectInput(session=session, inputId="floodSelect", selected = NULL) #as.numeric(data_bib$Screen3_flood)[values$count+1])
       updateTextInput(session=session, inputId="notesField", value = "")
       
       save(list="data_bib",file=Workingfile)

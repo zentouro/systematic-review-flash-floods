@@ -305,14 +305,15 @@ server <-  function(input,output,session){
     {input$nextButton},
     {
       updateMaterialSwitch(session=session, inputId="discardButton",value=FALSE)
-      updateCheckboxGroupInput(session=session, inputId="metaGroup", selected = FALSE)
-      updateSelectInput(session=session, inputId="assessmentSelect", selected = FALSE)
+      #metaGroup isn't working
+      updateCheckboxGroupInput(session=session, inputId="metaGroup", selected = as.numeric(data_bib$Screen3_meta)[values$count+1])
+      updateSelectInput(session=session, inputId="assessmentSelect", selected = as.numeric(data_bib$Screen3_assessment)[values$count+1])
       updateCheckboxGroupInput(session=session, inputId="beforeGroup", selected = FALSE)
       updateCheckboxGroupInput(session=session, inputId="duringGroup", selected = FALSE)
-      updateCheckboxGroupInput(session=session, inputId="impactGroup", selected = FALSE)
+      updateCheckboxGroupInput(session=session, inputId="impactGroup", selected = as.numeric(data_bib$Screen3_impact)[values$count+1])
       updateCheckboxGroupInput(session=session, inputId="methodsGroup", selected = FALSE)
-      updateSelectInput(session=session, inputId="geoSelect", selected = FALSE)
-      updateSelectInput(session=session, inputId="floodSelect", selected = FALSE)
+      updateSelectInput(session=session, inputId="geoSelect", selected = as.numeric(data_bib$Screen3_geo)[values$count+1])
+      updateSelectInput(session=session, inputId="floodSelect", selected = as.numeric(data_bib$Screen3_flood)[values$count+1])
       updateTextInput(session=session, inputId="notesField", value = "")
       
       save(list="data_bib",file=Workingfile)

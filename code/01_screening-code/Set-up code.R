@@ -135,11 +135,14 @@ data_bib$Screen3_meta[search_policy] <- "4"
 # Assessment type search
 search_risk_assessment <- grep(toupper("risk assessment"), toupper(data_bib$TI))
 data_bib$Screen3_assessment[search_risk_assessment] <- "1"
+search_vulnerability <- grep(toupper("vulnerability"), toupper(data_bib$TI))
+data_bib$Screen3_assessment[search_vulnerability] <- "2"
 search_risk_perception <- grep(toupper("risk perception"), toupper(data_bib$TI))
 data_bib$Screen3_assessment[search_risk_perception] <- "3"
 
 #----------------------------
 # Impact type search -- THIS NEEDS TO APPEND NOT OVERWRITE
+# DOESN"T WORK IN MAIN CODE ANYWAY 
 # search_impact_fatal <- grep(toupper("death"), toupper(data_bib$AB))
 # data_bib$Screen3_impact[search_impact_fatal] <- "1"
 # search_impact_comm <- grep(toupper("community"), toupper(data_bib$AB))
@@ -151,15 +154,30 @@ data_bib$Screen3_impact[search_impact_infra] <- "6"
 # Geography type search
 search_urban <- grep(toupper("urban"), toupper(data_bib$AB))
 data_bib$Screen3_geo[search_urban] <- "1"
+search_city <- grep(toupper("city"), toupper(data_bib$AB))
+data_bib$Screen3_geo[search_city] <- "1"
 search_rural <- grep(toupper("rural"), toupper(data_bib$AB))
 data_bib$Screen3_geo[search_rural] <- "2"
 
 #----------------------------
 # Flood type search
+search_runoff <- grep(toupper("runoff"), toupper(data_bib$TI))
+search_rainfall <- grep(toupper("rainfall"), toupper(data_bib$TI))
+search_dam <- grep(toupper("dam"), toupper(data_bib$TI))
+search_levee <- grep(toupper("levee"), toupper(data_bib$TI))
 search_landslide <- grep(toupper("landslide"), toupper(data_bib$TI))
 search_mudslide <- grep(toupper("mudslide"), toupper(data_bib$AB))
+search_snow <- grep(toupper("snow"), toupper(data_bib$AB))
+
+
+data_bib$Screen3_flood[search_runoff] <- "1"
+data_bib$Screen3_flood[search_rainfall] <- "2"
+data_bib$Screen3_flood[search_dam] <- "3"
+data_bib$Screen3_flood[search_levee] <- "3"
 data_bib$Screen3_flood[search_landslide] <- "5"
 data_bib$Screen3_flood[search_mudslide] <- "5"
+data_bib$Screen3_flood[search_snow] <- "6"
+
 
 save(data_bib, file = "data/screeningSocialData.rData")
 

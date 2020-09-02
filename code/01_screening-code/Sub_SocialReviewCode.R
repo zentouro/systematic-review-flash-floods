@@ -180,7 +180,7 @@ ui <- fluidPage(
                              no = tags$i(class = "fa fa-circle-o", 
                                          style = "color: steelblue")),
                            status = "info",
-                           selected = 3)),
+                           selected = NULL)),
         #--------------------------------------------------------------------
         # Assessment Type
       fluidRow(
@@ -311,9 +311,9 @@ server <-  function(input,output,session){
     {
       updateMaterialSwitch(session=session, inputId="discardButton",value=FALSE)
       # metaGroup isn't working
-      # when I use the 'correct' update button, it breaks all the other buttons 
       # can't even get it to manually update to select the 2nd button, even though manuall selection on first instance  works
       updateCheckboxGroupButtons(session=session, inputId="metaGroup", 
+      # updateCheckboxGroupInput(session = session, inputId = "metaGroup",
                                  selected = NULL) #as.numeric(data_bib$Screen3_meta)[values$count+1])
       updateSelectInput(session=session, inputId="assessmentSelect", 
                         selected = as.numeric(data_bib$Screen3_assessment)[values$count+1])
@@ -322,8 +322,8 @@ server <-  function(input,output,session){
       # when I turn impactGroup on, it breaks geoSelect and floodSelect updating? 
       updateCheckboxGroupInput(session=session, inputId="impactGroup", selected = NULL) #as.numeric(data_bib$Screen3_impact)[values$count+1])
       updateCheckboxGroupInput(session=session, inputId="methodsGroup", selected = NULL)
-      updateSelectInput(session=session, inputId="geoSelect", selected = NULL) #as.numeric(data_bib$Screen3_geo)[values$count+1])
-      updateSelectInput(session=session, inputId="floodSelect", selected = NULL) #as.numeric(data_bib$Screen3_flood)[values$count+1])
+      updateSelectInput(session=session, inputId="geoSelect", selected = as.numeric(data_bib$Screen3_geo)[values$count+1])
+      updateSelectInput(session=session, inputId="floodSelect", selected = as.numeric(data_bib$Screen3_flood)[values$count+1])
       updateTextInput(session=session, inputId="notesField", value = "")
       
       save(list="data_bib",file=Workingfile)
@@ -433,7 +433,19 @@ server <-  function(input,output,session){
   # More info about the screening selections
   hr()
   output$moreInfo <- renderText({
-    paste("TK WILL FILL IN LATER",
+    paste("Assessment Definitions:
+          Risk Assessment - 
+          Vulnerability Assessment - 
+          Risk Perception -
+          ", 
+          "Flood Type Definitions: 
+          Rainfall runoff - 
+          Cloudburst -
+          Dam/levee breach -
+          Speedy river -
+          Landslide/mudslide - 
+          Snowmelt - 
+          ",
           sep="\n")
   })
   hr()

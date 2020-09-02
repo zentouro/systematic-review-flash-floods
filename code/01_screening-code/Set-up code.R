@@ -110,6 +110,7 @@ data_bib      <- bib_all[which(bib_all$Screen2_Social == TRUE),]
 
 data_bib$Screen3_Assessed <- NA
 data_bib$Screen3_Reject   <- NA
+data_bib$Screen3_Planning <- NA
 
 data_bib$Screen3_meta       <- ""     
 data_bib$Screen3_assessment <- ""
@@ -121,16 +122,6 @@ data_bib$Screen3_geo        <- ""
 data_bib$Screen3_flood      <- ""
 data_bib$Screen3_Notes      <- ""
 
-
-#----------------------------
-# Meta-analysis search
-
-search_climate <- grep(toupper("climate change"),toupper(data_bib$AB))
-data_bib$Screen3_meta[search_climate] <- "1"
-search_policy <- grep(toupper("policy"),toupper(data_bib$AB))
-data_bib$Screen3_meta[search_policy] <- "4"
-
-
 #----------------------------
 # Assessment type search
 search_risk_assessment <- grep(toupper("risk assessment"), toupper(data_bib$TI))
@@ -139,16 +130,6 @@ search_vulnerability <- grep(toupper("vulnerability"), toupper(data_bib$TI))
 data_bib$Screen3_assessment[search_vulnerability] <- "2"
 search_risk_perception <- grep(toupper("risk perception"), toupper(data_bib$TI))
 data_bib$Screen3_assessment[search_risk_perception] <- "3"
-
-#----------------------------
-# Impact type search -- THIS NEEDS TO APPEND NOT OVERWRITE
-# DOESN"T WORK IN MAIN CODE ANYWAY 
-# search_impact_fatal <- grep(toupper("death"), toupper(data_bib$AB))
-# data_bib$Screen3_impact[search_impact_fatal] <- "1"
-# search_impact_comm <- grep(toupper("community"), toupper(data_bib$AB))
-# data_bib$Screen3_impact[search_impact_comm] <- "5"
-search_impact_infra <- grep(toupper("infrastructure"), toupper(data_bib$AB))
-data_bib$Screen3_impact[search_impact_infra] <- "6"
 
 #----------------------------
 # Geography type search
@@ -161,16 +142,16 @@ data_bib$Screen3_geo[search_rural] <- "2"
 
 #----------------------------
 # Flood type search
-search_runoff <- grep(toupper("runoff"), toupper(data_bib$TI))
-search_rainfall <- grep(toupper("rainfall"), toupper(data_bib$TI))
-search_dam <- grep(toupper("dam"), toupper(data_bib$TI))
-search_levee <- grep(toupper("levee"), toupper(data_bib$TI))
-search_landslide <- grep(toupper("landslide"), toupper(data_bib$TI))
+search_runoff <- grep(toupper("runoff"), toupper(data_bib$AB))
+search_rainfall <- grep(toupper("rainfall"), toupper(data_bib$AB))
+search_dam <- grep(toupper("dam "), toupper(data_bib$AB))
+search_levee <- grep(toupper("levee"), toupper(data_bib$AB))
+search_landslide <- grep(toupper("landslide"), toupper(data_bib$AB))
 search_mudslide <- grep(toupper("mudslide"), toupper(data_bib$AB))
 search_snow <- grep(toupper("snow"), toupper(data_bib$AB))
 
 
-data_bib$Screen3_flood[search_runoff] <- "1"
+data_bib$Screen3_flood[search_runoff] <- "2"
 data_bib$Screen3_flood[search_rainfall] <- "2"
 data_bib$Screen3_flood[search_dam] <- "3"
 data_bib$Screen3_flood[search_levee] <- "3"
@@ -188,8 +169,26 @@ save(data_bib, file = "data/screeningSocialData.rData")
 
 
 
+######################### Not Used
+
+#----------------------------
+# Meta-analysis search
+
+# search_climate <- grep(toupper("climate change"),toupper(data_bib$AB))
+# data_bib$Screen3_meta[search_climate] <- "1"
+# search_policy <- grep(toupper("policy"),toupper(data_bib$AB))
+# data_bib$Screen3_meta[search_policy] <- "4"
 
 
+#----------------------------
+# Impact type search -- THIS NEEDS TO APPEND NOT OVERWRITE
+# DOESN"T WORK IN MAIN CODE ANYWAY 
+# search_impact_fatal <- grep(toupper("death"), toupper(data_bib$AB))
+# data_bib$Screen3_impact[search_impact_fatal] <- "1"
+# search_impact_comm <- grep(toupper("community"), toupper(data_bib$AB))
+# data_bib$Screen3_impact[search_impact_comm] <- "5"
+# search_impact_infra <- grep(toupper("infrastructure"), toupper(data_bib$AB))
+# data_bib$Screen3_impact[search_impact_infra] <- "6"
 
 
 ######################### SAMPLE 

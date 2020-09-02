@@ -48,91 +48,94 @@ wordHighlightblue <- function(SuspWord,colH = "#A3C4D9") {paste0('<span style="b
 wordHighlightred <- function(SuspWord,colH = "#CFA6B6") {paste0('<span style="background-color:',colH,'">',SuspWord,'</span>')}
 wordHighlightdarkblue <- function(SuspWord,colH = "#BAB4D4") {paste0('<span style="background-color:',colH,'">',SuspWord,'</span>')}
 wordHighlightgrey <- function(SuspWord,colH = grey(0.9)) {paste0('<span style="background-color:',colH,'">',SuspWord,'</span>')}
+wordHighlightpurple <- function(SuspWord,colH = "#D4B9DA") {paste0('<span style="background-color:',colH,'">',SuspWord,'</span>')}
+
 
 
 helenhighlight <- function(YourData){
-  YourData %<>% str_replace_all(regex("flash ", ignore_case = TRUE), wordHighlightyellow)
-  YourData %<>% str_replace_all(regex("flash-", ignore_case = TRUE), wordHighlightyellow)
-  YourData %<>% str_replace_all(regex("flash", ignore_case = TRUE), wordHighlightyellow)
-  YourData %<>% str_replace_all(regex("floods", ignore_case = TRUE), wordHighlightyellow)
-  YourData %<>% str_replace_all(regex("flooding", ignore_case = TRUE), wordHighlightyellow)
-  YourData %<>% str_replace_all(regex("flood ", ignore_case = TRUE), wordHighlightyellow)
-  YourData %<>% str_replace_all(regex("flood", ignore_case = TRUE), wordHighlightyellow)
-  YourData %<>% str_replace_all(regex("flood-", ignore_case = TRUE), wordHighlightyellow)
-  YourData %<>% str_replace_all(regex("risk", ignore_case = TRUE), wordHighlightyellow)
-  YourData %<>% str_replace_all(regex("landslide", ignore_case = TRUE), wordHighlightyellow)
-  YourData %<>% str_replace_all(regex("landslides", ignore_case = TRUE), wordHighlightyellow)
-  YourData %<>% str_replace_all(regex("mudslide", ignore_case = TRUE), wordHighlightyellow)
-  YourData %<>% str_replace_all(regex("mudslides", ignore_case = TRUE), wordHighlightyellow)
   
-  YourData %<>% str_replace_all(regex("exposure", ignore_case = TRUE), wordHighlightgreen)
-  YourData %<>% str_replace_all(regex("vulnerability", ignore_case = TRUE), wordHighlightgreen)
+  #Meta - GREY
+  YourData %<>% str_replace_all(regex("policy", ignore_case = TRUE), wordHighlightgrey)
+  YourData %<>% str_replace_all(regex("climate", ignore_case = TRUE), wordHighlightgrey)
+  YourData %<>% str_replace_all(regex("climate change", ignore_case = TRUE), wordHighlightgrey)
+  
+  #Assessment Type - YELLOW
+  YourData %<>% str_replace_all(regex("risk perception", ignore_case = TRUE), wordHighlightyellow)
+  YourData %<>% str_replace_all(regex("risk assessment", ignore_case = TRUE), wordHighlightyellow)
+  YourData %<>% str_replace_all(regex("perception", ignore_case = TRUE), wordHighlightyellow)
+  YourData %<>% str_replace_all(regex("assessment", ignore_case = TRUE), wordHighlightyellow)
+  YourData %<>% str_replace_all(regex("vulnerability", ignore_case = TRUE), wordHighlightyellow)
+  
+  #Impacts - GREEN
   YourData %<>% str_replace_all(regex("impacting", ignore_case = TRUE), wordHighlightgreen)
   YourData %<>% str_replace_all(regex("impacts", ignore_case = TRUE), wordHighlightgreen)
   YourData %<>% str_replace_all(regex("impact", ignore_case = TRUE), wordHighlightgreen)
-  YourData %<>% str_replace_all(regex("focus group", ignore_case = TRUE), wordHighlightgreen)
-  YourData %<>% str_replace_all(regex("stakeholder", ignore_case = TRUE), wordHighlightgreen)
-  YourData %<>% str_replace_all(regex("culture", ignore_case = TRUE), wordHighlightgreen)
-  YourData %<>% str_replace_all(regex("questionnaire", ignore_case = TRUE), wordHighlightgreen)
   YourData %<>% str_replace_all(regex("killed", ignore_case = TRUE), wordHighlightgreen)
   YourData %<>% str_replace_all(regex("deaths", ignore_case = TRUE), wordHighlightgreen)
   YourData %<>% str_replace_all(regex("death", ignore_case = TRUE), wordHighlightgreen)
   YourData %<>% str_replace_all(regex("damage", ignore_case = TRUE), wordHighlightgreen)
   YourData %<>% str_replace_all(regex("disaster", ignore_case = TRUE), wordHighlightgreen)
   YourData %<>% str_replace_all(regex("economic", ignore_case = TRUE), wordHighlightgreen)
-  YourData %<>% str_replace_all(regex("social ", ignore_case = TRUE), wordHighlightgreen)
   YourData %<>% str_replace_all(regex("fatalities", ignore_case = TRUE), wordHighlightgreen)
+  YourData %<>% str_replace_all(regex("community", ignore_case = TRUE), wordHighlightgreen)
+  YourData %<>% str_replace_all(regex("infrastructure", ignore_case = TRUE), wordHighlightgreen)
+  YourData %<>% str_replace_all(regex("psych", ignore_case = TRUE), wordHighlightgreen)
+  YourData %<>% str_replace_all(regex("health", ignore_case = TRUE), wordHighlightgreen)
   
+  #Method - BLUE
   YourData %<>% str_replace_all(regex("modelling", ignore_case = TRUE), wordHighlightblue)
   YourData %<>% str_replace_all(regex("modeling", ignore_case = TRUE), wordHighlightblue)
   YourData %<>% str_replace_all(regex("models", ignore_case = TRUE), wordHighlightblue)
   YourData %<>% str_replace_all(regex("model", ignore_case = TRUE), wordHighlightblue)
-  YourData %<>% str_replace_all(regex("dynamical ", ignore_case = TRUE), wordHighlightblue)
-  YourData %<>% str_replace_all(regex("dynamics ", ignore_case = TRUE), wordHighlightblue)
-  YourData %<>% str_replace_all(regex("hydro ", ignore_case = TRUE), wordHighlightblue)
-  YourData %<>% str_replace_all(regex("dynamic ", ignore_case = TRUE), wordHighlightblue)
   YourData %<>% str_replace_all(regex("gis ", ignore_case = TRUE), wordHighlightblue)
   YourData %<>% str_replace_all(regex("remote sensing", ignore_case = TRUE), wordHighlightblue)
-  YourData %<>% str_replace_all(regex("hydrological ", ignore_case = TRUE), wordHighlightblue)
-  YourData %<>% str_replace_all(regex("hydrometeorologial ", ignore_case = TRUE), wordHighlightblue)
-  YourData %<>% str_replace_all(regex("hydro", ignore_case = TRUE), wordHighlightblue)
-  YourData %<>% str_replace_all(regex("discharge", ignore_case = TRUE), wordHighlightblue)
+  YourData %<>% str_replace_all(regex("focus group", ignore_case = TRUE), wordHighlightblue)
+  YourData %<>% str_replace_all(regex("simulation", ignore_case = TRUE), wordHighlightblue)
+  YourData %<>% str_replace_all(regex("machine learning", ignore_case = TRUE), wordHighlightblue)
+  YourData %<>% str_replace_all(regex("interview", ignore_case = TRUE), wordHighlightblue)
+  YourData %<>% str_replace_all(regex("survey", ignore_case = TRUE), wordHighlightblue)
+  YourData %<>% str_replace_all(regex("media", ignore_case = TRUE), wordHighlightblue)
+  YourData %<>% str_replace_all(regex("twitter", ignore_case = TRUE), wordHighlightblue)
+  YourData %<>% str_replace_all(regex("crowd", ignore_case = TRUE), wordHighlightblue)
+  YourData %<>% str_replace_all(regex("facebook", ignore_case = TRUE), wordHighlightblue)
+  YourData %<>% str_replace_all(regex("tweet", ignore_case = TRUE), wordHighlightblue)
   
-  YourData %<>% str_replace_all(regex("convective ", ignore_case = TRUE), wordHighlightdarkblue)
-  YourData %<>% str_replace_all(regex("convection ", ignore_case = TRUE), wordHighlightdarkblue)
-  YourData %<>% str_replace_all(regex("forecast ", ignore_case = TRUE), wordHighlightdarkblue)
-  YourData %<>% str_replace_all(regex("weather",ignore_case = TRUE), wordHighlightdarkblue)
-  YourData %<>% str_replace_all(regex("precipitation",ignore_case = TRUE), wordHighlightdarkblue)
-  YourData %<>% str_replace_all(regex("rainfall",ignore_case = TRUE), wordHighlightdarkblue)
-  YourData %<>% str_replace_all(regex(" rain",ignore_case = TRUE), wordHighlightdarkblue)
-  YourData %<>% str_replace_all(regex("radar ",ignore_case = TRUE), wordHighlightdarkblue)
+  #Type of Flash Flood
+  YourData %<>% str_replace_all(regex("landslide", ignore_case = TRUE), wordHighlightred)
+  YourData %<>% str_replace_all(regex("landslides", ignore_case = TRUE), wordHighlightred)
+  YourData %<>% str_replace_all(regex("mudslide", ignore_case = TRUE), wordHighlightred)
+  YourData %<>% str_replace_all(regex("mudslides", ignore_case = TRUE), wordHighlightred)
+  YourData %<>% str_replace_all(regex("river", ignore_case = TRUE), wordHighlightred)
+  YourData %<>% str_replace_all(regex("dam ", ignore_case = TRUE), wordHighlightred)
+  YourData %<>% str_replace_all(regex("snow", ignore_case = TRUE), wordHighlightred)
+  YourData %<>% str_replace_all(regex("pluvial", ignore_case = TRUE), wordHighlightred)
+  YourData %<>% str_replace_all(regex("cloudburst", ignore_case = TRUE), wordHighlightred)
+  YourData %<>% str_replace_all(regex("cloud", ignore_case = TRUE), wordHighlightred)
+  # YourData %<>% str_replace_all(regex("rainfall",ignore_case = TRUE), wordHighlightred)
+  # YourData %<>% str_replace_all(regex(" rain",ignore_case = TRUE), wordHighlightred)
   
-  YourData %<>% str_replace_all(regex(" compilation",ignore_case = TRUE), wordHighlightred)
-  YourData %<>% str_replace_all(regex("atlas",ignore_case = TRUE), wordHighlightred)
-  YourData %<>% str_replace_all(regex(month.name[1],ignore_case = TRUE), wordHighlightred)
-  YourData %<>% str_replace_all(regex(month.name[2],ignore_case = TRUE), wordHighlightred)
-  YourData %<>% str_replace_all(regex(month.name[3],ignore_case = TRUE), wordHighlightred)
-  YourData %<>% str_replace_all(regex(month.name[4],ignore_case = TRUE), wordHighlightred)
-  YourData %<>% str_replace_all(regex(month.name[6],ignore_case = TRUE), wordHighlightred)
-  YourData %<>% str_replace_all(regex(month.name[7],ignore_case = TRUE), wordHighlightred)
-  YourData %<>% str_replace_all(regex(month.name[8],ignore_case = TRUE), wordHighlightred)
-  YourData %<>% str_replace_all(regex(month.name[9],ignore_case = TRUE), wordHighlightred)
-  YourData %<>% str_replace_all(regex(month.name[10],ignore_case = TRUE), wordHighlightred)
-  YourData %<>% str_replace_all(regex(month.name[11],ignore_case = TRUE), wordHighlightred)
-  YourData %<>% str_replace_all(regex(month.name[12],ignore_case = TRUE), wordHighlightred)
-  YourData %<>% str_replace_all(regex("190",ignore_case = TRUE), wordHighlightred)
-  YourData %<>% str_replace_all(regex("191",ignore_case = TRUE), wordHighlightred)
-  YourData %<>% str_replace_all(regex("192",ignore_case = TRUE), wordHighlightred)
-  YourData %<>% str_replace_all(regex("193",ignore_case = TRUE), wordHighlightred)
-  YourData %<>% str_replace_all(regex("194",ignore_case = TRUE), wordHighlightred)
-  YourData %<>% str_replace_all(regex("195",ignore_case = TRUE), wordHighlightred)
-  YourData %<>% str_replace_all(regex("196",ignore_case = TRUE), wordHighlightred)
-  YourData %<>% str_replace_all(regex("197",ignore_case = TRUE), wordHighlightred)
-  YourData %<>% str_replace_all(regex("198",ignore_case = TRUE), wordHighlightred)
-  YourData %<>% str_replace_all(regex("199",ignore_case = TRUE), wordHighlightred)
-  YourData %<>% str_replace_all(regex("200",ignore_case = TRUE), wordHighlightred)
-  YourData %<>% str_replace_all(regex("201",ignore_case = TRUE), wordHighlightred)
-  YourData %<>% str_replace_all(regex("202",ignore_case = TRUE), wordHighlightred)
+  
+  #Timing 
+  YourData %<>% str_replace_all(regex("forecast", ignore_case = TRUE), wordHighlightdarkblue)
+  YourData %<>% str_replace_all(regex("ad hoc", ignore_case = TRUE), wordHighlightdarkblue)
+  YourData %<>% str_replace_all(regex("post hoc", ignore_case = TRUE), wordHighlightdarkblue)
+  YourData %<>% str_replace_all(regex("early", ignore_case = TRUE), wordHighlightdarkblue)
+  YourData %<>% str_replace_all(regex("warning", ignore_case = TRUE), wordHighlightdarkblue)
+  YourData %<>% str_replace_all(regex("EWS", ignore_case = TRUE), wordHighlightdarkblue)
+  YourData %<>% str_replace_all(regex("response", ignore_case = TRUE), wordHighlightdarkblue)
+  YourData %<>% str_replace_all(regex("detection", ignore_case = TRUE), wordHighlightdarkblue)
+  YourData %<>% str_replace_all(regex("emergency", ignore_case = TRUE), wordHighlightdarkblue)
+  YourData %<>% str_replace_all(regex("risk management", ignore_case = TRUE), wordHighlightdarkblue)
+  YourData %<>% str_replace_all(regex("management", ignore_case = TRUE), wordHighlightdarkblue)
+  YourData %<>% str_replace_all(regex("action", ignore_case = TRUE), wordHighlightdarkblue)
+  
+
+  #Geography
+  YourData %<>% str_replace_all(regex("urban", ignore_case = TRUE), wordHighlightpurple)
+  YourData %<>% str_replace_all(regex("rural", ignore_case = TRUE), wordHighlightpurple)
+  YourData %<>% str_replace_all(regex("indigenous", ignore_case = TRUE), wordHighlightpurple)
+
+  
 }
 
 #=======================================================================
@@ -184,12 +187,19 @@ ui <- fluidPage(
         #--------------------------------------------------------------------
         # Assessment Type
       fluidRow(
+        column(width = 6,
         selectInput("assessmentSelect", 
                     label = h5("Assessment Type"), 
                     choices = list("Risk Assessment" = 1, 
                                    "Vulnerability Assessment" = 2, 
                                    "Risk Perception" = 3), 
                     selected = NULL)),
+        checkboxGroupButtons(inputId="genButton", 
+                             label = h5("General"),
+                             choices = list("Planning" = 1, 
+                                            "Science" = 2),
+                             status = "info",
+                             selected = NULL)), 
         
         #--------------------------------------------------------------------
         # "Directly" before a flood
@@ -241,24 +251,25 @@ ui <- fluidPage(
         #--------------------------------------------------------------------
         # Geography
         fluidRow(
+          column(width = 6,
           selectInput("geoSelect", 
-                    label = h5("Geography........| "), 
+                    label = h5("Geography"), 
                     choices = list("Urban" = 1, 
                                    "Rural" = 2, 
                                    "Indigenous/'Global South'" = 3), 
-                    selected = NULL),        
+                    selected = NULL)),        
 
         #--------------------------------------------------------------------
         # Flood Type
         selectInput("floodSelect", 
                     label = h5("Select Flood Type"), 
-                    choices = list("Rainfall runoff" = 1, 
-                                    "Cloudburst" = 2, 
+                    choices = list("Not specified" = 1, 
+                                    "Rainfall" = 2, 
                                     "Dam/levee breach" = 3,
                                     "Speedy river" = 4,
                                     "Landslide/Mudslide" = 5,
                                     "Snowmelt" = 6), 
-                    selected = NULL)),
+                    selected = 1)),
       
       #--------------------------------------------------------------------
       # Notes
@@ -306,22 +317,20 @@ server <-  function(input,output,session){
   
   highlighter <- eventReactive( 
     # not sure if the problems with the update button have to do with eventReactive, but most of my googling for the error
-    # lead me to conversations about ignoreNull and ignoreInit
+    # lead me to conversations about ignoreNull and 
+    # some of these buttons will update from the database if there is a value there (others will not because i couldnt
+    # figure out these update buttons)
     {input$nextButton}, #ignoreNULL = FALSE, ignoreInit = FALSE,
     {
       updateMaterialSwitch(session=session, inputId="discardButton",value=FALSE)
-      # metaGroup isn't working
-      # can't even get it to manually update to select the 2nd button, even though manuall selection on first instance  works
-      updateCheckboxGroupButtons(session=session, inputId="metaGroup", 
-      # updateCheckboxGroupInput(session = session, inputId = "metaGroup",
-                                 selected = NULL) #as.numeric(data_bib$Screen3_meta)[values$count+1])
+      updateCheckboxGroupButtons(session=session, inputId="genButton", selected = character(0))
+      updateCheckboxGroupButtons(session=session, inputId="metaGroup", selected = character(0))
       updateSelectInput(session=session, inputId="assessmentSelect", 
                         selected = as.numeric(data_bib$Screen3_assessment)[values$count+1])
-      updateCheckboxGroupInput(session=session, inputId="beforeGroup", selected = NULL)
-      updateCheckboxGroupInput(session=session, inputId="duringGroup", selected = NULL)
-      # when I turn impactGroup on, it breaks geoSelect and floodSelect updating? 
-      updateCheckboxGroupInput(session=session, inputId="impactGroup", selected = NULL) #as.numeric(data_bib$Screen3_impact)[values$count+1])
-      updateCheckboxGroupInput(session=session, inputId="methodsGroup", selected = NULL)
+      updateCheckboxGroupButtons(session=session, inputId="duringGroup", selected = character(0))
+      updateCheckboxGroupButtons(session=session, inputId="beforeGroup", selected = character(0))
+      updateCheckboxGroupInput(session=session, inputId="impactGroup", selected = 0) 
+      updateCheckboxGroupInput(session=session, inputId="methodsGroup", selected = 0)
       updateSelectInput(session=session, inputId="geoSelect", selected = as.numeric(data_bib$Screen3_geo)[values$count+1])
       updateSelectInput(session=session, inputId="floodSelect", selected = as.numeric(data_bib$Screen3_flood)[values$count+1])
       updateTextInput(session=session, inputId="notesField", value = "")
@@ -347,6 +356,7 @@ server <-  function(input,output,session){
            # Output to data_bib         
            data_bib$Screen3_Assessed    [values$count-1] <<- TRUE
            data_bib$Screen3_Reject      [values$count-1] <<- input$discardButton
+           data_bib$Screen3_Planning    [values$count-1] <<- input$genButton
            
            if(length(input$metaGroup) <= 0){
               data_bib$Screen3_meta     [values$count-1] <<- 0
@@ -434,18 +444,20 @@ server <-  function(input,output,session){
   hr()
   output$moreInfo <- renderText({
     paste("Assessment Definitions:
-          Risk Assessment - 
-          Vulnerability Assessment - 
-          Risk Perception -
+          Risk Assessment - TK 
+          Vulnerability  - TK
+          Risk Perception - TK
           ", 
-          "Flood Type Definitions: 
-          Rainfall runoff - 
-          Cloudburst -
-          Dam/levee breach -
-          Speedy river -
-          Landslide/mudslide - 
-          Snowmelt - 
+          "Flash Flood Type Definitions: 
+          Not specified - flood type not definied or explicitly stated, unclear
+          Rainfall - runoff, cloudburst, pluvial, caused by heavy precipitation (no river involved)
+          Dam/levee breach - anything to do with dams or levees
+          Speedy river - river height changes rapidly, fast onset riverine flood
+          Landslide/mudslide - explicitly mentions landslide/mudslide or debris in water
+          Snowmelt - caused by melting snow
           ",
+          "General Planning - select if the paper is not explicitly related to a single event",
+          "If the paper is about impacts in general, not related to a specific event, make sure 'general' is clicked before selecting the ",
           sep="\n")
   })
   hr()

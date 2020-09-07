@@ -337,7 +337,6 @@ server <-  function(input,output,session){
       
       save(list="data_bib",file=Workingfile)
 
-      
       #-----------------------------------------------------
       # If the row number is not at the end, increment up
       # THIS IS *REALLY BAD CODING*, ADDED IN BECAUSE IT WANTS TO RECALCULATE THE VALUE.
@@ -419,6 +418,7 @@ server <-  function(input,output,session){
           # Output to data_bib         
           data_bib$Screen3_Assessed   [nrow(data_bib)] <<- TRUE
           data_bib$Screen3_Reject     [nrow(data_bib)] <<- input$discardButton
+          data_bib$Screen3_Planning   [nrow(data_bib)] <<- input$genButton
           data_bib$Screen3_meta       [nrow(data_bib)] <<- input$metaGroup
           data_bib$Screen3_assessment [nrow(data_bib)] <<- input$assessmentSelect
           data_bib$Screen3_before     [nrow(data_bib)] <<- input$beforeGroup
@@ -445,7 +445,7 @@ server <-  function(input,output,session){
   output$moreInfo <- renderText({
     paste("Assessment Definitions:
           Risk Assessment - TK 
-          Vulnerability  - TK
+          Vulnerability  - Bulnerability assessments, creating vulnerability maps
           Risk Perception - TK
           ", 
           "Flash Flood Type Definitions: 

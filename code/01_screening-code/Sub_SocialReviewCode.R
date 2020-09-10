@@ -355,7 +355,13 @@ server <-  function(input,output,session){
            # Output to data_bib         
            data_bib$Screen3_Assessed    [values$count-1] <<- TRUE
            data_bib$Screen3_Reject      [values$count-1] <<- input$discardButton
-           data_bib$Screen3_Planning    [values$count-1] <<- input$genButton
+           
+           if(length(input$genButton) <= 0){
+             data_bib$Screen3_Planning    [values$count-1] <<- 0
+           }
+           else {
+             data_bib$Screen3_Planning    [values$count-1] <<- input$genButton
+           }
            
            if(length(input$metaGroup) <= 0){
               data_bib$Screen3_meta     [values$count-1] <<- 0

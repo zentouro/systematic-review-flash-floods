@@ -244,7 +244,7 @@ ui <- fluidPage(
                                           "Mapping & GIS" = 3,
                                           "Simulations or scenarios" = 4,
                                           "Community guidance & tools" = 5,
-                                          "Interviews"= 6,
+                                          "Interviews/Surveys"= 6,
                                           "Social media or crowd sourcing" = 7),
                            selected = NULL)),
         
@@ -451,7 +451,7 @@ server <-  function(input,output,session){
   output$moreInfo <- renderText({
     paste("Assessment Definitions:
           Risk Assessment - TK 
-          Vulnerability  - Bulnerability assessments, creating vulnerability maps
+          Vulnerability  - Vulnerability assessments, creating vulnerability maps
           Risk Perception - TK
           ", 
           "Flash Flood Type Definitions: 
@@ -462,8 +462,9 @@ server <-  function(input,output,session){
           Landslide/mudslide - explicitly mentions landslide/mudslide or debris in water
           Snowmelt - caused by melting snow
           ",
-          "General Planning - select if the paper is not explicitly related to a single event",
-          "If the paper is about impacts in general, not related to a specific event, make sure 'general' is clicked before selecting the ",
+          "General Planning - select if the paper is not explicitly related to a single event and is about preparing or planning for future events",
+          "If the paper is about impacts in general, not related to a specific event, make sure 'general' is clicked before selecting the impacts",
+          "General Science - select if paper is about science-based general planning - ie developing geophysical risk maps",
           sep="\n")
   })
   hr()

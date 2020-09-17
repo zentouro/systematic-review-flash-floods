@@ -244,7 +244,7 @@ ui <- fluidPage(
                                           "Mapping & GIS" = 3,
                                           "Simulations or scenarios" = 4,
                                           "Community guidance & tools" = 5,
-                                          "Interviews/Surveys"= 6,
+                                          "Interviews/surveys"= 6,
                                           "Social media or crowd sourcing" = 7),
                            selected = NULL)),
         

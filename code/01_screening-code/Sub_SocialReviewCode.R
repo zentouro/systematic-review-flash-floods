@@ -450,7 +450,7 @@ server <-  function(input,output,session){
   hr()
   output$moreInfo <- renderText({
     paste("Assessment Definitions:
-          Risk Assessment - including creating risk maps 
+          Risk Assessment - including creating risk maps, risk analysis, and resilience assessments 
           Vulnerability  - Vulnerability assessments, creating vulnerability maps
           Risk Perception - TK
           ", 

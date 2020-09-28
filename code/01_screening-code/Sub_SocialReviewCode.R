@@ -77,6 +77,7 @@ helenhighlight <- function(YourData){
   YourData %<>% str_replace_all(regex("disaster", ignore_case = TRUE), wordHighlightgreen)
   YourData %<>% str_replace_all(regex("economic", ignore_case = TRUE), wordHighlightgreen)
   YourData %<>% str_replace_all(regex("fatalities", ignore_case = TRUE), wordHighlightgreen)
+  YourData %<>% str_replace_all(regex("casualties", ignore_case = TRUE), wordHighlightgreen)
   YourData %<>% str_replace_all(regex("community", ignore_case = TRUE), wordHighlightgreen)
   YourData %<>% str_replace_all(regex("infrastructure", ignore_case = TRUE), wordHighlightgreen)
   YourData %<>% str_replace_all(regex("psych", ignore_case = TRUE), wordHighlightgreen)
@@ -450,7 +451,7 @@ server <-  function(input,output,session){
   hr()
   output$moreInfo <- renderText({
     paste("Assessment Definitions:
-          Risk Assessment - including creating risk maps, risk analysis, and resilience assessments 
+          Risk Assessment - including creating risk (or susceptibility) maps, risk analysis, and resilience assessments 
           Vulnerability  - Vulnerability assessments, creating vulnerability maps
           Risk Perception - TK
           ", 

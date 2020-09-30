@@ -357,20 +357,19 @@ server <-  function(input,output,session){
            data_bib$Screen3_Assessed    [values$count-1] <<- TRUE
            data_bib$Screen3_Reject      [values$count-1] <<- input$discardButton
            
-           data_bib$Screen3_Planning <- as.character(data_bib$Screen3_Planning)
+           #data_bib$Screen3_Planning <- as.character(data_bib$Screen3_Planning)
            if(length(input$genButton) <= 0){
              data_bib$Screen3_Planning    [values$count-1] <<- 0
            }
            else {
-             data_bib$Screen3_Planning[values$count-1] <- str_c(input$genButton, collapse = '_')
-             print(data_bib$Screen3_Planning[values$count-1])
+             data_bib$Screen3_Planning[values$count-1] <<- str_c(input$genButton, collapse = '_')
              #data_bib$Screen3_Planning    [values$count-1] <<- input$genButton
            }
            
            if(length(input$metaGroup) <= 0){
               data_bib$Screen3_meta     [values$count-1] <<- 0
            } else{
-              data_bib$Screen3_meta     [values$count-1] <<- input$metaGroup
+              data_bib$Screen3_meta     [values$count-1] <<- str_c(input$metaGroup, collapse = '_')
            }
            
            if(length(input$assessmentSelect) <= 0){t
@@ -382,25 +381,25 @@ server <-  function(input,output,session){
            if(length(input$beforeGroup) <= 0){
              data_bib$Screen3_before    [values$count-1] <<- 0
            } else {
-             data_bib$Screen3_before    [values$count-1] <<- input$beforeGroup
+             data_bib$Screen3_before    [values$count-1] <<- str_c(input$beforeGroup, collapse = '_')
            }
            
            if(length(input$duringGroup) <= 0){
              data_bib$Screen3_during    [values$count-1] <<- 0
            } else {
-             data_bib$Screen3_during    [values$count-1] <<- input$duringGroup
+             data_bib$Screen3_during    [values$count-1] <<- str_c(input$duringGroup, collapse = '_')
            }
            
            if(length(input$impactGroup) <= 0){
              data_bib$Screen3_impact    [values$count-1] <<- 0
            } else {
-             data_bib$Screen3_impact    [values$count-1] <<- input$impactGroup
+             data_bib$Screen3_impact    [values$count-1] <<- str_c(input$impactGroup, collapse = '_')
            }
         
            if(length(input$methodsGroup) <= 0){
              data_bib$Screen3_methods   [values$count-1] <<- 0
            } else {
-             data_bib$Screen3_methods   [values$count-1] <<- input$methodsGroup
+             data_bib$Screen3_methods   [values$count-1] <<- str_c(input$methodsGroup, collapse = '_')
            }
            
            if(length(input$geoSelect) <= 0){
@@ -428,13 +427,13 @@ server <-  function(input,output,session){
           # Output to data_bib         
           data_bib$Screen3_Assessed   [nrow(data_bib)] <<- TRUE
           data_bib$Screen3_Reject     [nrow(data_bib)] <<- input$discardButton
-          data_bib$Screen3_Planning   [nrow(data_bib)] <<- input$genButton
-          data_bib$Screen3_meta       [nrow(data_bib)] <<- input$metaGroup
+          data_bib$Screen3_Planning   [nrow(data_bib)] <<- str_c(input$genButton, collapse = '_')
+          data_bib$Screen3_meta       [nrow(data_bib)] <<- str_c(input$metaGroup, collapse = '_')
           data_bib$Screen3_assessment [nrow(data_bib)] <<- input$assessmentSelect
-          data_bib$Screen3_before     [nrow(data_bib)] <<- input$beforeGroup
-          data_bib$Screen3_during     [nrow(data_bib)] <<- input$duringGroup
-          data_bib$Screen3_impact     [nrow(data_bib)] <<- input$impactGroup
-          data_bib$Screen3_methods    [nrow(data_bib)] <<- input$methodsGroup
+          data_bib$Screen3_before     [nrow(data_bib)] <<- str_c(input$beforeGroup, collapse = '_')
+          data_bib$Screen3_during     [nrow(data_bib)] <<- str_c(input$duringGroup, collapse = '_')
+          data_bib$Screen3_impact     [nrow(data_bib)] <<- str_c(input$impactGroup, collapse = '_')
+          data_bib$Screen3_methods    [nrow(data_bib)] <<- str_c(input$methodsGroup, collapse = '_')
           data_bib$Screen3_geo        [nrow(data_bib)] <<- input$geoSelect
           data_bib$Screen3_flood      [nrow(data_bib)] <<- input$floodSelect
           data_bib$Screen3_Notes      [nrow(data_bib)] <<- input$notesField

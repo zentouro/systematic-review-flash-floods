@@ -164,6 +164,18 @@ save(data_bib, file = "data/screeningSocialData.rData")
 
 
 
+########################## ADDING ERROR ROW
+
+setwd("~/Documents/GitHub/systematic-review-flash-floods")
+Workingfile <- "~/Documents/GitHub/systematic-review-flash-floods/data/screeningSocialData.rData"
+load(Workingfile)
+
+data_bib$Screen3_Error <- NA
+
+data_bib$Screen3_Error <- data_bib$Screen3_Assessed
+
+#save(data_bib, file = "data/screeningSocialData-withErrors.rData")
+
 
 
 

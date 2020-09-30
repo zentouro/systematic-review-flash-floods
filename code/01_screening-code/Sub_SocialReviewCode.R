@@ -357,11 +357,14 @@ server <-  function(input,output,session){
            data_bib$Screen3_Assessed    [values$count-1] <<- TRUE
            data_bib$Screen3_Reject      [values$count-1] <<- input$discardButton
            
+           data_bib$Screen3_Planning <- as.character(data_bib$Screen3_Planning)
            if(length(input$genButton) <= 0){
              data_bib$Screen3_Planning    [values$count-1] <<- 0
            }
            else {
-             data_bib$Screen3_Planning    [values$count-1] <<- input$genButton
+             data_bib$Screen3_Planning[values$count-1] <- str_c(input$genButton, collapse = '_')
+             print(data_bib$Screen3_Planning[values$count-1])
+             #data_bib$Screen3_Planning    [values$count-1] <<- input$genButton
            }
            
            if(length(input$metaGroup) <= 0){
@@ -370,7 +373,7 @@ server <-  function(input,output,session){
               data_bib$Screen3_meta     [values$count-1] <<- input$metaGroup
            }
            
-           if(length(input$assessmentSelect) <= 0){
+           if(length(input$assessmentSelect) <= 0){t
              data_bib$Screen3_assessment[values$count-1] <<- 0
            } else{
              data_bib$Screen3_assessment[values$count-1] <<- input$assessmentSelect

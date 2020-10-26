@@ -33,7 +33,7 @@ bib_both      <- bib_all[which(bib_all$Screen2_Social == TRUE & bib_all$Screen2_
 
 ```{r}
 
-summary <- data.frame("total" = nrow(bib_all), "accepted" = nrow(bib_accept), "geophysical" = nrow(bib_hydrology), "social" = nrow(bib_social), "geophysical and social" = nrow(bib_both))
+summary <- data.frame("total" = nrow(bib_all), "accepted" = nrow(bib_accept), "geophysical" = nrow(bib_hydrology), "social" = nrow(bib_social), "geophysical and social" = nrow(bib_both), "events" = nrow(bib_event))
 
 head(summary)
 

@@ -455,7 +455,7 @@ server <-  function(input,output,session){
     paste("Assessment Definitions:
           Risk Assessment - including creating risk (or susceptibility) maps, risk analysis, and resilience assessments 
           Vulnerability  - Vulnerability assessments, creating vulnerability maps
-          Risk Perception - TK
+          Risk Perception - e.g. interviews about individuals perspectives on flash flood risks
           ", 
           "Flash Flood Type Definitions: 
           Not specified - flood type not definied or explicitly stated, unclear

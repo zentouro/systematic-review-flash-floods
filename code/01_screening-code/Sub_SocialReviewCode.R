@@ -25,7 +25,9 @@ library(rmdformats)
 
 rm(list=ls())
 # adjust this to the appropriate folder on your system
-Workingfile <- "~/Documents/GitHub/systematic-review-flash-floods/data/screeningSocialData.RData"
+#Workingfile <- "~/Documents/GitHub/systematic-review-flash-floods/data/screeningSocialData.RData"
+Workingfile <- "~/Documents/GitHub/systematic-review-flash-floods/data/screeningSocialData-ErrorsToReScreen.RData"
+
 load(Workingfile)
 
 #=======================================================================

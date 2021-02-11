@@ -178,7 +178,19 @@ data_bib$Screen3_Error <- data_bib$Screen3_Assessed
 
 
 
+#-----------------------------------------------------------------------------------
+# Setting up for re-screening ones with error
+#     
+#-----------------------------------------------------------------------------------
 
+setwd("~/Documents/GitHub/systematic-review-flash-floods")
+Workingfile <- "~/Documents/GitHub/systematic-review-flash-floods/data/05_screened-data/screeningSocialData-0211-ACTIVE.rData"
+load(Workingfile)
+
+bib_all       <- data_bib; rm(data_bib)
+data_bib      <- bib_all[which(bib_all$Screen3_Error == TRUE),]
+
+#save(data_bib, file = "data/screeningSocialData-ErrorsToReScreen.rData")
 
 
 ######################### Not Used

@@ -1,0 +1,66 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+#Workingfile <- "~/Documents/GitHub/systematic-review-flash-floods/data/screeningSocialData.RData"
+Workingfile <- "~/Documents/GitHub/systematic-review-flash-floods/data/screeningSocialData_extra130.RData"
+load(Workingfile)
+```
+
+```{r}
+new_data <- data_bib
+```
+
+
+```{r}
+new_data$Screen3_assessment
+```
+
+
+```{r}
+toyRA <- new_data[,names(new_data) %in% c("TI","AB","Screen3_assessment","Screen2_Notes","Screen3_Notes")]
+rownames(toyRA) <- NULL
+toyRA$Screen3_assessment <- as.numeric(toyRA$Screen3_assessment)
+```
+
+```{r}
+# This column is when the rating changes
+toyRA$assessment_changes  <- 0
+## ADD IN NEW COLUMN WITH MATHY ONE
+
+# This column is going to be if asssessment is in the title
+# THIS IS TRUE FALSE answer. either the title contains the words or not
+toyRA$riskassessment_grepTI_riskassessment <- 0 
+toy$riskassessment_grepTI_riskassessment[grep("risk assessment",toyRA$TI )]  <- 1
+
+# This column is going to be if asssessment is in the title
+# THIS IS A COUNT of the number of times the phrase shows up
+toyRA$riskassessment_countAB_riskassessment <- 0
+toyRA$riskassessment_countAB_riskassessment <- str_count(toyRA$AB,"risk assessment")
+
+# This column is going to be if asssessment is in the title
+# THIS IS TRUE FALSE answer. either the title contains the words or not
+toyRA$riskassessment_priorRA <- 0
+toyRA$riskassessment_priorRA[which(toyRA$Screen3_assessment==1)] <- 1
+
+
+```
+
+
+
+```{r}
+toyMA <- new_data[,names(new_data) %in% c("TI","AB","Screen3_assessment","Screen2_Notes","Screen3_Notes")]
+
+toyMA$management_grepnotes_management <- 0
+toyMA$management_grepnotes_management[grep("management",toyMA$Screen3_Notes )]  <- 1
+
+```
+
+
+
+Is the final product 1 single column with a single category (exclusive)
+Or.. mulitple columns that can turn off and on (tags)
+
+

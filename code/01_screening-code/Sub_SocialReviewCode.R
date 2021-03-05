@@ -37,8 +37,10 @@ data_bib$Screen1_Assessed[which(is.na(data_bib$Screen1_Assessed)==TRUE)] <- FALS
 data_bib$Reject[which(is.na(data_bib$Reject)==TRUE)] <- FALSE
 data_bib$Screen2_Assessed[which(is.na(data_bib$Screen2_Assessed)==TRUE)] <- FALSE
 data_bib$Screen3_Assessed[which(is.na(data_bib$Screen3_Assessed)==TRUE)] <- FALSE
+data_bib$Screen3_Assessed_v2[which(is.na(data_bib$Screen3_Assessed_v2)==TRUE)] <- FALSE
 
-data_bib <- data_bib[with(data_bib, order(Screen3_Assessed)), ]
+
+data_bib <- data_bib[with(data_bib, order(Screen3_Assessed_v2)), ]
 
 ## Do we want to change any of the highlighting rules? 
 #=======================================================================
@@ -356,7 +358,7 @@ server <-  function(input,output,session){
            
            #-----------------------------------------------------
            # Output to data_bib         
-           data_bib$Screen3_Assessed    [values$count-1] <<- TRUE
+           data_bib$Screen3_Assessed_v2    [values$count-1] <<- TRUE
            data_bib$Screen3_Reject      [values$count-1] <<- input$discardButton
            
            #data_bib$Screen3_Planning <- as.character(data_bib$Screen3_Planning)
@@ -427,7 +429,7 @@ server <-  function(input,output,session){
           
           #-----------------------------------------------------
           # Output to data_bib         
-          data_bib$Screen3_Assessed   [nrow(data_bib)] <<- TRUE
+          data_bib$Screen3_Assessed_v2   [nrow(data_bib)] <<- TRUE
           data_bib$Screen3_Reject     [nrow(data_bib)] <<- input$discardButton
           data_bib$Screen3_Planning   [nrow(data_bib)] <<- str_c(input$genButton, collapse = '_')
           data_bib$Screen3_meta       [nrow(data_bib)] <<- str_c(input$metaGroup, collapse = '_')
@@ -474,7 +476,7 @@ server <-  function(input,output,session){
   })
   hr()
   output$count <- renderUI({ HTML(paste("You have reviewed", (values$count - 2) ,"papers in this session")) })
-  output$total <- renderUI({HTML(paste("In total, we have reviewed", (sum(data_bib$Screen3_Assessed, na.rm = TRUE)), "of", (length(data_bib$Screen3_Assessed))))})
+  output$total <- renderUI({HTML(paste("In total, we have reviewed", (sum(data_bib$Screen3_Assessed_v2, na.rm = TRUE)), "of", (length(data_bib$Screen3_Assessed_v2))))})
 }
 
 #=======================================================================

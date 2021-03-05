@@ -190,7 +190,9 @@ load(Workingfile)
 bib_all       <- data_bib; rm(data_bib)
 data_bib      <- bib_all[which(bib_all$Screen3_Error == TRUE),]
 
-#save(data_bib, file = "data/screeningSocialData-ErrorsToReScreen.rData")
+data_bib$Screen3_Assessed_v2 <- NA
+
+save(data_bib, file = "data/screeningSocialData-ErrorsToReScreen.rData")
 
 
 ######################### Not Used

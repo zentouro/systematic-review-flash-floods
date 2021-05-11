@@ -1,0 +1,74 @@
+---
+title: "Merging code"
+output: html_notebook
+---
+
+This code merges in the social rescreening data and the main data
+
+```{r}
+rm(list=ls())
+newdata <- "./data/screeningSocialData-ErrorsToReScreen.rData"
+olddata <- "./data/screeningSocialData.rData"
+```
+
+```{r}
+load(newdata)
+newdata <- data_bib
+rm(data_bib)
+```
+
+```{r}
+load(olddata)
+olddata <- data_bib
+rm(data_bib)
+```
+
+# Check
+
+OK now check that the two don't overlap
+
+```{r}
+newdata$TI[2] %in% olddata$TI
+```
+
+They do overlap.  So we need to remove the old data rows with those in.
+
+```{r}
+counter <- which(olddata$TI %in% newdata$TI)
+length(counter)
+```
+
+Now make a new data.frame with just the old screening data
+
+```{r}
+justold <- olddata[-counter,]
+```
+
+and make a new column to say the old data was not assessed in the final screen
+
+```{r}
+justold$Screen3_Assessed_v2 <- FALSE
+```
+
+Check the column names are the same
+
+```{r}
+names(justold) == names(newdata)
+```
+
+and add onto the end
+
+```{r}
+finaldata <- rbind(justold,newdata)
+```
+
+
+and save as both an .RData file AND a .csv
+
+```{r}
+write.csv(finaldata,"./data/FINAL_ScreenedData_20210511.csv",row.names=FALSE,quote=FALSE)
+```
+
+```{r}
+save(finaldata,file="./data/FINAL_ScreenedData_20210511.rData")
+```

@@ -1752,10 +1752,18 @@ summary {
 <p>This code merges in the social rescreening data and the main data</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucm0obGlzdD1scygpKVxubmV3ZGF0YSA8LSBcIi4vZGF0YS9zY3JlZW5pbmdTb2NpYWxEYXRhLUVycm9yc1RvUmVTY3JlZW4uckRhdGFcIlxub2xkZGF0YSA8LSBcIi4vZGF0YS9zY3JlZW5pbmdTb2NpYWxEYXRhLnJEYXRhXCJcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShyZWFkeGwpXG5saWJyYXJ5KHdyaXRleGwpXG5gYGAifQ== -->
+<pre class="r"><code>library(readxl)
+library(writexl)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucm0obGlzdD1scygpKVxubmV3ZGF0YSA8LSBcIi9Vc2Vycy9obGc1MTU1L0Ryb3Bib3gvTXkgTWFjIChFMi1HRU8tV0tNTDAxMSkvRG9jdW1lbnRzL0dpdEh1Yi9zeXN0ZW1hdGljLXJldmlldy1mbGFzaC1mbG9vZHMvZGF0YS9zY3JlZW5pbmdTb2NpYWxEYXRhLUVycm9yc1RvUmVTY3JlZW4uckRhdGFcIlxub2xkZGF0YSA8LSBcIi9Vc2Vycy9obGc1MTU1L0Ryb3Bib3gvTXkgTWFjIChFMi1HRU8tV0tNTDAxMSkvRG9jdW1lbnRzL0dpdEh1Yi9zeXN0ZW1hdGljLXJldmlldy1mbGFzaC1mbG9vZHMvZGF0YS9zY3JlZW5pbmdTb2NpYWxEYXRhLnJEYXRhXCJcbmBgYCJ9 -->
 <pre class="r"><code>rm(list=ls())
-newdata &lt;- &quot;./data/screeningSocialData-ErrorsToReScreen.rData&quot;
-olddata &lt;- &quot;./data/screeningSocialData.rData&quot;</code></pre>
+newdata &lt;- &quot;/Users/hlg5155/Dropbox/My Mac (E2-GEO-WKML011)/Documents/GitHub/systematic-review-flash-floods/data/screeningSocialData-ErrorsToReScreen.rData&quot;
+olddata &lt;- &quot;/Users/hlg5155/Dropbox/My Mac (E2-GEO-WKML011)/Documents/GitHub/systematic-review-flash-floods/data/screeningSocialData.rData&quot;</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1805,9 +1813,8 @@ length(counter)</code></pre>
 <p>Now make a new data.frame with just the old screening data</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuanVzdG9sZCA8LSBvbGRkYXRhWy1jb3VudGVyLF1cblxuXG5gYGAifQ== -->
-<pre class="r"><code>justold &lt;- olddata[-counter,]
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuanVzdG9sZCA8LSBvbGRkYXRhWy1jb3VudGVyLF1cbmBgYCJ9 -->
+<pre class="r"><code>justold &lt;- olddata[-counter,]</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1844,17 +1851,32 @@ length(counter)</code></pre>
 <p>and save as both an .RData file AND a .csv</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxud3JpdGV4bDo6d3JpdGVfeGxzeChmaW5hbGRhdGEsXCIvVXNlcnMvaGxnNTE1NS9Ecm9wYm94L015IE1hYyAoRTItR0VPLVdLTUwwMTEpL0RvY3VtZW50cy9HaXRIdWIvc3lzdGVtYXRpYy1yZXZpZXctZmxhc2gtZmxvb2RzL2RhdGEvRklOQUxfU2NyZWVuZWREYXRhXzIwMjEwNTExLnhsc3hcIilcbmBgYCJ9 -->
+<pre class="r"><code>writexl::write_xlsx(finaldata,&quot;/Users/hlg5155/Dropbox/My Mac (E2-GEO-WKML011)/Documents/GitHub/systematic-review-flash-floods/data/FINAL_ScreenedData_20210511.xlsx&quot;)</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2F2ZShmaW5hbGRhdGEsZmlsZT1cIi4vZGF0YS9GSU5BTF9TY3JlZW5lZERhdGFfMjAyMTA1MTEuckRhdGFcIilcbmBgYCJ9 -->
-<pre class="r"><code>save(finaldata,file=&quot;./data/FINAL_ScreenedData_20210511.rData&quot;)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2F2ZShmaW5hbGRhdGEsZmlsZT1cIi9Vc2Vycy9obGc1MTU1L0Ryb3Bib3gvTXkgTWFjIChFMi1HRU8tV0tNTDAxMSkvRG9jdW1lbnRzL0dpdEh1Yi9zeXN0ZW1hdGljLXJldmlldy1mbGFzaC1mbG9vZHMvZGF0YS9GSU5BTF9TY3JlZW5lZERhdGFfMjAyMTA1MTEuckRhdGFcIilcbmBgYCJ9 -->
+<pre class="r"><code>save(finaldata,file=&quot;/Users/hlg5155/Dropbox/My Mac (E2-GEO-WKML011)/Documents/GitHub/systematic-review-flash-floods/data/FINAL_ScreenedData_20210511.rData&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuMSsxXG5gYGAifQ== -->
+<pre class="r"><code>1+1</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDJcbiJ9 -->
+<pre><code>[1] 2</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTWVyZ2luZyBjb2RlIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgpUaGlzIGNvZGUgbWVyZ2VzIGluIHRoZSBzb2NpYWwgcmVzY3JlZW5pbmcgZGF0YSBhbmQgdGhlIG1haW4gZGF0YQoKYGBge3J9CnJtKGxpc3Q9bHMoKSkKbmV3ZGF0YSA8LSAiLi9kYXRhL3NjcmVlbmluZ1NvY2lhbERhdGEtRXJyb3JzVG9SZVNjcmVlbi5yRGF0YSIKb2xkZGF0YSA8LSAiLi9kYXRhL3NjcmVlbmluZ1NvY2lhbERhdGEuckRhdGEiCmBgYAoKYGBge3J9CmxvYWQobmV3ZGF0YSkKbmV3ZGF0YSA8LSBkYXRhX2JpYgpybShkYXRhX2JpYikKYGBgCgpgYGB7cn0KbG9hZChvbGRkYXRhKQpvbGRkYXRhIDwtIGRhdGFfYmliCnJtKGRhdGFfYmliKQpgYGAKCiMgQ2hlY2sKCk9LIG5vdyBjaGVjayB0aGF0IHRoZSB0d28gZG9uJ3Qgb3ZlcmxhcAoKYGBge3J9Cm5ld2RhdGEkVElbMl0gJWluJSBvbGRkYXRhJFRJCmBgYAoKVGhleSBkbyBvdmVybGFwLiAgU28gd2UgbmVlZCB0byByZW1vdmUgdGhlIG9sZCBkYXRhIHJvd3Mgd2l0aCB0aG9zZSBpbi4KCmBgYHtyfQpjb3VudGVyIDwtIHdoaWNoKG9sZGRhdGEkVEkgJWluJSBuZXdkYXRhJFRJKQpsZW5ndGgoY291bnRlcikKYGBgCgpOb3cgbWFrZSBhIG5ldyBkYXRhLmZyYW1lIHdpdGgganVzdCB0aGUgb2xkIHNjcmVlbmluZyBkYXRhCgpgYGB7cn0KanVzdG9sZCA8LSBvbGRkYXRhWy1jb3VudGVyLF0KYGBgCgphbmQgbWFrZSBhIG5ldyBjb2x1bW4gdG8gc2F5IHRoZSBvbGQgZGF0YSB3YXMgbm90IGFzc2Vzc2VkIGluIHRoZSBmaW5hbCBzY3JlZW4KCmBgYHtyfQpqdXN0b2xkJFNjcmVlbjNfQXNzZXNzZWRfdjIgPC0gRkFMU0UKYGBgCgpDaGVjayB0aGUgY29sdW1uIG5hbWVzIGFyZSB0aGUgc2FtZQoKYGBge3J9Cm5hbWVzKGp1c3RvbGQpID09IG5hbWVzKG5ld2RhdGEpCmBgYAoKYW5kIGFkZCBvbnRvIHRoZSBlbmQKCmBgYHtyfQpmaW5hbGRhdGEgPC0gcmJpbmQoanVzdG9sZCxuZXdkYXRhKQpgYGAKCgphbmQgc2F2ZSBhcyBib3RoIGFuIC5SRGF0YSBmaWxlIEFORCBhIC5jc3YKCmBgYHtyfQp3cml0ZS5jc3YoZmluYWxkYXRhLCIuL2RhdGEvRklOQUxfU2NyZWVuZWREYXRhXzIwMjEwNTExLmNzdiIscm93Lm5hbWVzPUZBTFNFLHF1b3RlPUZBTFNFKQpgYGAKCmBgYHtyfQpzYXZlKGZpbmFsZGF0YSxmaWxlPSIuL2RhdGEvRklOQUxfU2NyZWVuZWREYXRhXzIwMjEwNTExLnJEYXRhIikKYGBgCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTWVyZ2luZyBjb2RlIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgpUaGlzIGNvZGUgbWVyZ2VzIGluIHRoZSBzb2NpYWwgcmVzY3JlZW5pbmcgZGF0YSBhbmQgdGhlIG1haW4gZGF0YQoKYGBge3J9CmxpYnJhcnkocmVhZHhsKQpsaWJyYXJ5KHdyaXRleGwpCmBgYAoKCgpgYGB7cn0Kcm0obGlzdD1scygpKQpuZXdkYXRhIDwtICIvVXNlcnMvaGxnNTE1NS9Ecm9wYm94L015IE1hYyAoRTItR0VPLVdLTUwwMTEpL0RvY3VtZW50cy9HaXRIdWIvc3lzdGVtYXRpYy1yZXZpZXctZmxhc2gtZmxvb2RzL2RhdGEvc2NyZWVuaW5nU29jaWFsRGF0YS1FcnJvcnNUb1JlU2NyZWVuLnJEYXRhIgpvbGRkYXRhIDwtICIvVXNlcnMvaGxnNTE1NS9Ecm9wYm94L015IE1hYyAoRTItR0VPLVdLTUwwMTEpL0RvY3VtZW50cy9HaXRIdWIvc3lzdGVtYXRpYy1yZXZpZXctZmxhc2gtZmxvb2RzL2RhdGEvc2NyZWVuaW5nU29jaWFsRGF0YS5yRGF0YSIKYGBgCgpgYGB7cn0KbG9hZChuZXdkYXRhKQpuZXdkYXRhIDwtIGRhdGFfYmliCnJtKGRhdGFfYmliKQpgYGAKCmBgYHtyfQpsb2FkKG9sZGRhdGEpCm9sZGRhdGEgPC0gZGF0YV9iaWIKcm0oZGF0YV9iaWIpCmBgYAoKIyBDaGVjawoKT0sgbm93IGNoZWNrIHRoYXQgdGhlIHR3byBkb24ndCBvdmVybGFwCgpgYGB7cn0KbmV3ZGF0YSRUSVsyXSAlaW4lIG9sZGRhdGEkVEkKYGBgCgpUaGV5IGRvIG92ZXJsYXAuICBTbyB3ZSBuZWVkIHRvIHJlbW92ZSB0aGUgb2xkIGRhdGEgcm93cyB3aXRoIHRob3NlIGluLgoKYGBge3J9CmNvdW50ZXIgPC0gd2hpY2gob2xkZGF0YSRUSSAlaW4lIG5ld2RhdGEkVEkpCmxlbmd0aChjb3VudGVyKQpgYGAKCk5vdyBtYWtlIGEgbmV3IGRhdGEuZnJhbWUgd2l0aCBqdXN0IHRoZSBvbGQgc2NyZWVuaW5nIGRhdGEKCmBgYHtyfQpqdXN0b2xkIDwtIG9sZGRhdGFbLWNvdW50ZXIsXQpgYGAKCmFuZCBtYWtlIGEgbmV3IGNvbHVtbiB0byBzYXkgdGhlIG9sZCBkYXRhIHdhcyBub3QgYXNzZXNzZWQgaW4gdGhlIGZpbmFsIHNjcmVlbgoKYGBge3J9Cmp1c3RvbGQkU2NyZWVuM19Bc3Nlc3NlZF92MiA8LSBGQUxTRQpgYGAKCkNoZWNrIHRoZSBjb2x1bW4gbmFtZXMgYXJlIHRoZSBzYW1lCgpgYGB7cn0KbmFtZXMoanVzdG9sZCkgPT0gbmFtZXMobmV3ZGF0YSkKYGBgCgphbmQgYWRkIG9udG8gdGhlIGVuZAoKYGBge3J9CmZpbmFsZGF0YSA8LSByYmluZChqdXN0b2xkLG5ld2RhdGEpCmBgYAoKCmFuZCBzYXZlIGFzIGJvdGggYW4gLlJEYXRhIGZpbGUgQU5EIGEgLmNzdgoKYGBge3J9CndyaXRleGw6OndyaXRlX3hsc3goZmluYWxkYXRhLCIvVXNlcnMvaGxnNTE1NS9Ecm9wYm94L015IE1hYyAoRTItR0VPLVdLTUwwMTEpL0RvY3VtZW50cy9HaXRIdWIvc3lzdGVtYXRpYy1yZXZpZXctZmxhc2gtZmxvb2RzL2RhdGEvRklOQUxfU2NyZWVuZWREYXRhXzIwMjEwNTExLnhsc3giKQpgYGAKCmBgYHtyfQpzYXZlKGZpbmFsZGF0YSxmaWxlPSIvVXNlcnMvaGxnNTE1NS9Ecm9wYm94L015IE1hYyAoRTItR0VPLVdLTUwwMTEpL0RvY3VtZW50cy9HaXRIdWIvc3lzdGVtYXRpYy1yZXZpZXctZmxhc2gtZmxvb2RzL2RhdGEvRklOQUxfU2NyZWVuZWREYXRhXzIwMjEwNTExLnJEYXRhIikKYGBgCgpgYGB7cn0KMSsxCmBgYAoK</div>
 
 
 

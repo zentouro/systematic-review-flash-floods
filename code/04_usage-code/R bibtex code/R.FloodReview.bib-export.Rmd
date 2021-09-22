@@ -1,0 +1,160 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+rm(list=ls())
+library(RefManageR)
+library(bibtex)
+sep="/"
+```
+
+# Read in our screened data
+
+```{r}
+screenedfile <- "~/Dropbox/My Mac (E2-GEO-WKML011)/Documents/GitHub/systematic-review-flash-floods/data/08_finaldatabase/ScreenedData_for-visulization.xlsx"
+
+# read in, skip the 1st row
+socialscreened <- readxl:: read_excel(screenedfile,skip = 1)
+rm(screenedfile)
+```
+
+# Read in the original bib data
+
+```{r,warning=FALSE}
+# Location of the .bib files
+bibfile.loc1 <- "~/Documents/GitHub/systematic-review-flash-floods/data/01_Web-Of-Science"
+bibfile.loc2 <- "~/Documents/GitHub/systematic-review-flash-floods/data/01_Web-Of-Science/May13-update"
+
+# List the files
+file.list <- paste(bibfile.loc1,list.files(bibfile.loc1),sep=sep)
+file.list <- c(file.list,paste(bibfile.loc2,list.files(bibfile.loc2),sep=sep))
+file.list <- file.list[grep(".bib",file.list)]
+               
+
+# Read in the data as character strings
+alldata <- readLines(file.list[1])
+for(n in 1:length(file.list)){
+   tmp     <- readLines(file.list[n])
+   alldata <- c(alldata,tmp)
+}
+rm(tmp);rm(bibfile.loc1);rm(bibfile.loc2);rm(n)
+```
+
+Find which rows have @article e.g. a new bib field 
+Use that row to pull out the ISI as a unique identifier
+```{r}
+# Then find which rows have @article e.g. a new bib field 
+nextpaperindex <- grep("@article",alldata)
+nextpaperindex <- c(nextpaperindex,grep("@inproceedings",alldata))
+nextpaperindex <- c(nextpaperindex,grep("@incollection",alldata))
+nextpaperindex <- sort(nextpaperindex)
+```
+
+and now split our text into a list - there are 4804
+```{r}
+bib.0fullcovidence <- split(alldata,
+                    cut(seq_along(alldata),
+                        breaks=c(nextpaperindex,(length(alldata)+3))-2))
+```
+To see entry 1, bib.0fullcovidence[[1]], bib.0fullcovidence[[2]] etc
+
+
+# Make our unique ISI identifier
+
+```{r}
+# split
+# choose the bit after ISI:
+ISIbibfile   <- lapply(strsplit(alldata[nextpaperindex],"ISI:"),"[",2) 
+# remove the trailing comma and stick ISI on the front to match our spreadsheet
+ISIbibfile   <- paste("ISI",gsub(",", "", ISIbibfile, perl=T),sep="")
+```
+
+# Remove duplicates
+```{r}
+bib.0fullcovidence <- bib.0fullcovidence[duplicated(ISIbibfile)==FALSE]
+nextpaperindex <- nextpaperindex[duplicated(ISIbibfile)==FALSE]
+ISIbibfile <- ISIbibfile[duplicated(ISIbibfile)==FALSE]
+names(bib.0fullcovidence) <- ISIbibfile
+
+```
+
+```{r}
+# merge and check this works
+socialtmp <- socialscreened
+socialtmp$ISI.fullbib <- socialtmp$UT
+socialtmp$ISI.screened <- socialtmp$UT
+socialtmp$Index.screened <- socialtmp$Key
+
+Key <- data.frame(Index.fullbib= 1:length(ISIbibfile),ISI.fullbib = ISIbibfile)
+Key <- merge(Key,
+             socialtmp[,c("ISI.fullbib","Index.screened","ISI.screened")],
+             by="ISI.fullbib",all.x=FALSE,all.y=TRUE)
+names(Key)[1] <- "UT" 
+socialscreened <- merge(socialscreened,Key,all.x=TRUE,all.y=TRUE,by="UT")
+rm(socialtmp)
+```
+
+```{r}
+# Make tidy, rearrange columns and sort
+Key <- Key[,c(2,3,1,4)]
+Key <- Key[order(Key$Index.screened),]
+
+#bib.0fullcovidence - everything
+bib.1socialscreened <- bib.0fullcovidence[socialscreened$Index.fullbib]
+bib.2genderscreened <- bib.0fullcovidence[socialscreened$Index.fullbib[grep("5", socialscreened$`Meta topic`)]]
+
+
+bib.2genderscreenedTI <-  unlist(lapply(bib.2genderscreened, grep, pattern="Title =", value=TRUE))
+bib.2genderscreenedTI <- data.frame(TI=sort(unname(bib.2genderscreenedTI)))
+```
+
+
+```{r}
+# write out gender
+
+library(readr)
+write_lines(bib.2genderscreened[[1]],file="./outputbibs/genderbibtestSINGLE.bib")
+write_lines(bib.2genderscreened[[1]],file="./outputbibs/genderbibtest.bib")
+for (n in 2:length(bib.2genderscreened)){
+   write_lines(bib.2genderscreened[[n]],file="./outputbibs/genderbibtest.bib",append=TRUE)
+}  
+  
+# write out 578 thing  
+write_lines(bib.1socialscreened[[1]],file="./outputbibs/bib.1socialscreened.bib")
+for (n in 2:length(bib.1socialscreened)){
+   write_lines(bib.1socialscreened[[n]],file="./outputbibs/bib.1socialscreened.bib",append=TRUE)
+}    
+  
+# write out full thing  
+write_lines(bib.0fullcovidence[[1]],file="./outputbibs/bib.0fullcovidence.bib")
+for (n in 2:length(bib.0fullcovidence)){
+   write_lines(bib.0fullcovidence[[n]],file="./outputbibs/bib.0fullcovidence.bib",append=TRUE)
+}    
+    
+  
+  
+
+```
+
+
+
+```{r}
+
+```
+
+
+
+
+
+# Choose your subset
+
+```{r}
+#mysubset <- screeneddata[1:3,]
+#bibinitial <- GetBibEntryWithDOI(mysubset$DI)
+```
+
+# Print the full BiBteX
+
+

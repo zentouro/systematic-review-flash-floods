@@ -1,0 +1,7496 @@
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
+ER  - 
+
